@@ -29,6 +29,7 @@ h1, h2, h3, h4, h5, h6{
 }
 /* COLORS */
 :root{
+    --white: #FEFEFE;
     --blue1: #2f3a59;
     --blue2: #455473;
     --green1: #43D993;
