@@ -17,6 +17,10 @@ function settingPageXMetaElements(page_index){
     style.setAttribute('href', 'css/per_page/page'+page_index+'.css');
     pageMetaPlace.appendChild(style);
     pageMetaPlace.appendChild(script);
+
+    if (page_index == 0){
+        setParticles(pageMetaPlace);
+    }
 }
 
 
@@ -40,6 +44,17 @@ function showingTargetPage() {
     }, 100);
 }
 
+
+function setParticles(placeToInsert) {
+    var app_js = document.createElement('script'),
+        particles_js = document.createElement('script');
+    
+    app_js.setAttribute('src', '/js/script/particles-js/app.js');
+    particles_js.setAttribute('src', '/js/script/particles-js/particles.js');
+
+    placeToInsert.appendChild(particles_js);
+    placeToInsert.appendChild(app_js);
+}
 
 
 
