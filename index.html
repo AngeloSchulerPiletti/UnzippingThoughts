@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- JAVASCRIPT - carregamento primário  -->
-    <script src="js/script.js"></script>
+    <script src="js/script1.js"></script>
 
     <!-- LINKS -->
     <link rel="shortcut icon" href="#" type="image/x-icon">
@@ -20,11 +20,54 @@
   </head>
 
   <body>
-    <!-- JAVASCRIPT - carregamento secundário  -->
-    <script src="js/script2.js"></script>
-    <!-- HTML - início -->
-    <!-- HTML - fim -->
+    <!-- HEADER  -->
+    <header>
+      <div id="header">
+        <div class="left">
+            <h1>LOGO</h1>
+        </div>
+        <div class="center">
+            <nav>
+                <h1>MENU INTERNO</h1>
+            </nav>
+        </div>
+        <div class="right">
+            <h1>ICONE DE DROPMENU</h1>
+        </div>
+    </div>
+
+    <!-- dropmenu  -->
+    <div id="dropmenu">
+        <nav>
+            <a class="nav_link">Página 0</a>
+            <a class="nav_link">Página 1</a>
+            <a class="nav_link">Página 2</a>
+            <a class="nav_link">Página 3</a>
+        </nav>
+    </div>
+    </header>
+    <!-- HEADER  -->
+
+    <main>
+      <!-- NÃO INSIRA NADA AQUI  -->
+      <!-- MODIFIQUE AS PÁGINAS EM: html->pages->pagex.html  -->
+    </main>
+
+    <!-- FOOTER  -->
+    <footer>
+      <div id="footer">
+        <h1>Isso é o footer</h1>
+      </div>
+    </footer>
+    <!-- FOOTER  -->
   </body>
-  <!-- JAVASCRIPT - carregamento terciário  -->
-  <script src="js/script3.js"></script>
+
+  <!--            JAVASCRIPT             -->
+  <!--     carregamento de páginas       -->
+  <script src="js/dynamicPageComponents.js"></script>
+  <!--     carregamento secundário       -->
+  <script src="js/script2.js"></script>
+
+  <!--         JAVASCRIPT MODULES        -->
+  <script src="js/scripts/opacityAnim.js" type="module"></script>
 </html>

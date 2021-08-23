@@ -1,2 +1,84 @@
 /* ARQUIVO PRINCIPAL DOS ESTILOS  */
 /* Adicione aqui apenas estilos que serão usados em TODOS os arquivos html. Exemplo: fontes e cores */
+
+/* -------------- LAYOUT DA PÁGINA -----------*/
+body{
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header{
+    background-color: yellow;
+}
+main{
+    background-color: orange;
+    flex-grow: 1;
+}
+footer{
+    background-color: orangered;
+}
+/* -------------- LAYOUT DA PÁGINA -----------*/
+/*
+*
+*
+*
+*
+*/
+/* -------------- HEADER --------------*/
+header #header{
+    display: grid;
+    grid-template-columns: 2fr 7fr 2fr;
+}
+.nav_link{
+    cursor: pointer;
+    text-decoration: underline;
+}
+img{
+    width: 50vw;
+    margin-left: 25vw;
+}
+/* -------------- HEADER --------------*/
+/*
+*
+*
+*
+*
+*/
+/* -------------- HEADER --------------*/
+main .page_meta{
+    display: none;
+}
+/* -------------- HEADER --------------*/
+/*
+*
+*
+*
+*
+*/
+/* -------------- FOOTER --------------*/
+footer #footer{
+
+}
+/* -------------- FOOTER --------------*/
+/*
+*
+*
+*
+*
+*/
+
+
+/*+----------------------------------------+
+  |                 ANIMAÇÕES              |
+  +----------------------------------------+*/
+.page_content[data-anim]{
+    transition: opacity 500ms;
+}
+.page_content[data-anim="none"]{
+    opacity: 0;
+}
+.page_content[data-anim="on"]{
+    opacity: 1;
+}

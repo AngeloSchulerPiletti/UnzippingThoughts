@@ -1,4 +1,5 @@
 # Salve Pessoal, projeto cru, com as estruturas prontas!
-- diretorio paginas está em português para fins de URL amigável
-- Nome das paginas html devem ser alteradas conforme o nome da seção. Exemplo: Seção Produtos: produtos.html
-- Jamais altere o reset.css
+- Os nomes das paginas html **NÃO** devem ser alterados;
+- Jamais altere o reset.css;
+- Para adicionar um script ou estilo que será usado apenas na page em que você está trabalhando, procure pelo arquivo nos diretórios per_page;
+- script1.js e script2.js são arquivos de script no escopo do DOM inteiro, para scripts específicos de um página leia o aviso anterior;
