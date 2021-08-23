@@ -16,3 +16,7 @@
   position: relative;
   padding: 30px;
 }
+
+strong{
+    color: var(--green1);
+}
