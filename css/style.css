@@ -50,6 +50,14 @@ h1, h2, h3, h4, h5, h6{
 header #header{
     display: grid;
     grid-template-columns: 2fr 7fr 2fr;
+    padding: 2vw 4vw 2vw 4vw;
+
+    color: var(--white);
+}
+.center nav{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
 }
 .nav_link{
     cursor: pointer;
