@@ -1,3 +1,7 @@
 #teste{
     color: var(--green2);
 }
+
+.descricao{
+    padding: 20px;
+}
