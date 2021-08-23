@@ -1,6 +1,14 @@
 /* ARQUIVO PRINCIPAL DOS ESTILOS  */
 /* Adicione aqui apenas estilos que serão usados em TODOS os arquivos html. Exemplo: fontes e cores */
-
+/* COLORS */
+:root{
+    --white: #FEFEFE;
+    --blue1: #2f3a59;
+    --blue2: #455473;
+    --green1: #43D993;
+    --green2: #5EF275;
+    --black: #0D0D0D;
+}
 /* -------------- LAYOUT DA PÁGINA -----------*/
 body{
     min-height: 100vh;
@@ -27,15 +35,7 @@ p, a, span, legend, label, li, div{
 h1, h2, h3, h4, h5, h6{
     font-family: 'Oswald', sans-serif;
 }
-/* COLORS */
-:root{
-    --white: #FEFEFE;
-    --blue1: #2f3a59;
-    --blue2: #455473;
-    --green1: #43D993;
-    --green2: #5EF275;
-    --black: #0D0D0D;
-}
+
 /* -------------- LAYOUT DA PÁGINA -----------*/
 /*
 *
