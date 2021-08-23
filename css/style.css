@@ -19,11 +19,21 @@ main{
 footer{
     background-color: orangered;
 }
+
+/* FONTS  */
 p, a, span, legend, label, li, div{
     font-family: 'Roboto', sans-serif;
 }
 h1, h2, h3, h4, h5, h6{
     font-family: 'Oswald', sans-serif;
+}
+/* COLORS */
+:root{
+    --blue1: #2f3a59;
+    --blue2: #455473;
+    --green1: #43D993;
+    --green2: #5EF275;
+    --black: #0D0D0D;
 }
 /* -------------- LAYOUT DA PÁGINA -----------*/
 /*
