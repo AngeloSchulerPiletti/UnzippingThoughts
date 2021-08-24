@@ -1541,7 +1541,7 @@ window.particlesJS = function (tag_id, params) {
 var particles_json = {
   "particles": {
     "number": {
-      "value": 80,
+      "value": 140,
       "density": {
         "enable": true,
         "value_area": 800
@@ -1566,12 +1566,12 @@ var particles_json = {
       }
     },
     "opacity": {
-      "value": 0.5,
+      "value": 1,
       "random": false,
       "anim": {
         "enable": false,
         "speed": 1,
-        "opacity_min": 0.1,
+        "opacity_min": 0.5,
         "sync": false
       }
     },
@@ -1594,7 +1594,7 @@ var particles_json = {
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 4,
       "direction": "none",
       "random": false,
       "straight": false,
