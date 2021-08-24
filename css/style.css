@@ -12,6 +12,7 @@ body{
 header{
     background-color: yellow;
 }
+
 main{
     background-color: orange;
     flex-grow: 1;
