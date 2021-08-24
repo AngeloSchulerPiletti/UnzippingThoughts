@@ -1,0 +1,27 @@
+/* Carousel CSS FILE */
+
+#carousel_container #carousel{
+    position: relative;
+    width: 100%;
+    height: 25vw; /*Deve ser alterado*/
+}
+.img_container{
+    width: 25vw;
+    height: 25vw;
+    background-color: black;
+
+    position: absolute;
+}
+#carousel .hide{
+    opacity: 0;
+}
+#carousel .left{
+    left: 0;
+}
+#carousel .center{
+    left: 50%;
+    transform: translateX(-50%);
+}
+#carousel .right{
+    right: 0;
+}
