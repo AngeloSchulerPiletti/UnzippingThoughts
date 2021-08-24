@@ -1,6 +1,14 @@
 /* ARQUIVO PRINCIPAL DOS ESTILOS  */
 /* Adicione aqui apenas estilos que serão usados em TODOS os arquivos html. Exemplo: fontes e cores */
-
+/* COLORS */
+:root{
+    --white: #FEFEFE;
+    --blue1: #2f3a59;
+    --blue2: #455473;
+    --green1: #43D993;
+    --green2: #5EF275;
+    --black: #0D0D0D;
+}
 /* -------------- LAYOUT DA PÁGINA -----------*/
 body{
     min-height: 100vh;
@@ -8,24 +16,31 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    background-color: var(--black);
 }
 header{
-    background-color: yellow;
+    background-color: transparent;
+    z-index: 10000;
 }
 
 main{
-    background-color: orange;
+    background-color: transparent;
     flex-grow: 1;
+    z-index: 100;
 }
 footer{
-    background-color: orangered;
+    z-index: 1000;
 }
+
+/* FONTS  */
 p, a, span, legend, label, li, div{
     font-family: 'Roboto', sans-serif;
 }
 h1, h2, h3, h4, h5, h6{
     font-family: 'Oswald', sans-serif;
 }
+
 /* -------------- LAYOUT DA PÁGINA -----------*/
 /*
 *
@@ -34,17 +49,21 @@ h1, h2, h3, h4, h5, h6{
 *
 */
 /* -------------- HEADER --------------*/
-header #header{
+header{
     display: grid;
     grid-template-columns: 2fr 7fr 2fr;
+    padding: 2vw 4vw 2vw 4vw;
+
+    color: var(--white);
+}
+.center nav{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
 }
 .nav_link{
     cursor: pointer;
     text-decoration: underline;
-}
-img{
-    width: 50vw;
-    margin-left: 25vw;
 }
 /* -------------- HEADER --------------*/
 /*
@@ -65,8 +84,29 @@ main .page_meta{
 *
 */
 /* -------------- FOOTER --------------*/
-footer #footer{
+footer{
+    overflow: hidden;
+}
+footer #footer_content{
+    position: relative;
+    z-index: 10000;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 8vh 0 8vh 0;
+    background-color: var(--white);
+    
+    text-align: center;
+    color: var(--black);
+}
+#footer_content h1{
+    font-size: 2vw;
+}
+#list_container{
+    display: flex;
+    justify-content: space-around;
 }
 /* -------------- FOOTER --------------*/
 /*

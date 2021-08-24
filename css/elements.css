@@ -1,0 +1,61 @@
+/* PRESET DE ALGUNS ELEMENTOS  */
+/*+------------------------------+
+  |            BOTÕES            |
+  +------------------------------+*/
+.code_button{
+  position: relative;
+
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.8vw;
+    width: fit-content;
+
+    color: var(--white);
+    background-color: var(--green1);
+
+    padding: 0.8vw 3vw;
+
+    transition: background-color 500ms, transform 300ms;
+}
+.code_button::before{
+  content: "{";
+
+  position: absolute;
+  left: 0vw;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 1.8em;
+    color: var(--green2);
+
+  opacity: 0;
+
+  transition: opacity 400ms, left 200ms;
+}
+.code_button::after{
+  content: "}";
+
+  position: absolute;
+  right: 0vw;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 1.8em;
+  color: var(--green2);
+
+  opacity: 0;
+
+  transition: opacity 400ms, right 200ms;
+}
+.code_button:hover{
+  background-color: var(--green2);
+  transform: translateX(20%);
+}
+.code_button:hover::before{
+  opacity: 1;
+  left: -2.5vw;
+}
+.code_button:hover::after{
+  opacity: 1;
+  right: -2.5vw;
+}
