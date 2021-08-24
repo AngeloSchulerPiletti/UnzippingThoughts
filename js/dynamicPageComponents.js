@@ -46,6 +46,8 @@ function settingPageXMetaElements(page_index) {
         case 0:
             setScript(pageMetaPlace, 'script/particles-js/particles.js');
             setScript(pageMetaPlace, 'script/carousel.js');
+            setStyle(pageMetaPlace, 'specific_features/carousel.css');
+            setStyle(pageMetaPlace, 'specific_features/particlesjs.css');
             break;
         default:
             break;
