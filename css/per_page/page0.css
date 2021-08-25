@@ -53,9 +53,8 @@
   gap: 6vw;
 }
 #sec2 img{
-  width: 25vw;
-  height: 25vw;
-  background-color: var(--black);
+  width: 18vw;
+  height: 18vw;
 }
 .flex_conj{
   width: 30vw;
@@ -111,19 +110,28 @@
 /*================= SEC3 ================*/
 #sec3{
   background-color: var(--white);
-  padding: 5vw 10vw 5vw 10vw;
+  padding: 5vw 10vw 2vw 10vw;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 6vw;
+  gap: 5vw;
 }
 #sec3 .text_format1{
   display: flex;
   flex-direction: column;
   gap: 1.6vw;
 }
-.carousel_container{
-  
+#sec3 .text_format1 h2{
+  width: fit-content;
+}
+#carousel_container #carousel{
+    height: 25vw; /*Deve ser alterado*/
+  }
+#colaborator_name{
+  margin: auto auto 3vw auto;
+  width: 50%;
+  text-align: center;
+  font-size: 1.6vw;
 }
 /*================= SEC3 ================*/

@@ -7,6 +7,7 @@
     --blue2: #455473;
     --green1: #43D993;
     --green2: #5EF275;
+    --green1_op: #43D993B0;
     --black: #0D0D0D;
 }
 /* -------------- LAYOUT DA PÁGINA -----------*/
@@ -63,7 +64,36 @@ header{
 }
 .nav_link{
     cursor: pointer;
-    text-decoration: underline;
+    text-transform: uppercase;
+    color: var(--white);
+
+    transition: color 200ms ease-in-out;
+}
+.nav_link:hover{
+    color: var(--green1);
+}
+.nav_link::before, .nav_link::after{
+    opacity: 0;
+    color: var(--white);
+    font-size: 1.3em;
+}
+.nav_link::before{
+    content: "<";
+    transition: color 200ms ease-in-out, margin-right 300ms, opacity 100ms;
+}
+.nav_link::after{
+    content: "/>";
+    transition: color 200ms ease-in-out, margin-left 300ms, opacity 100ms;
+}
+.nav_link:hover::before, .nav_link:hover::after{
+    opacity: 1;
+    color: var(--green1);
+}
+.nav_link:hover::before{
+    margin-right: 0.3vw;
+}
+.nav_link:hover::after{
+    margin-left: 0.3vw;
 }
 /* -------------- HEADER --------------*/
 /*
