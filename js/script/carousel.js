@@ -6,8 +6,8 @@ var imgs_container = document.querySelectorAll('.img_container');
 
 
 
-function rollCarousel(action){ //Number: 1-> back 2-> next
-    if(action==1){
+function rollCarousel(action) { //Number: 1-> back 2-> next
+    if (action == 1) {
         for (let index = 0; index < imgs_container.length; index++) {
             if (imgs_container[index].classList.contains('left')) {
                 imgs_container[index].classList.remove('left');
@@ -20,36 +20,36 @@ function rollCarousel(action){ //Number: 1-> back 2-> next
                             ref_i_pos3 = index + 3,
                             ref_i_neg = 4;
                         break;
-                    case 2: 
+                    case 2:
                         var ref_i_pos1 = index + 1,
                             ref_i_pos2 = index + 2,
                             ref_i_pos3 = 0,
-                            ref_i_neg  = index - 1;
+                            ref_i_neg = index - 1;
                         break;
                     case 3:
                         var ref_i_pos1 = 4,
                             ref_i_pos2 = 0,
                             ref_i_pos3 = 1,
-                            ref_i_neg  = index - 1;
+                            ref_i_neg = index - 1;
                         break;
                     case 4:
                         var ref_i_pos1 = 0,
                             ref_i_pos2 = 1,
                             ref_i_pos3 = 2,
-                            ref_i_neg  = index - 1;
+                            ref_i_neg = index - 1;
                         break;
-                
+
                     default:
-                    var ref_i_pos1 = index + 1,
-                        ref_i_pos2 = index + 2,
-                        ref_i_pos3 = index + 3,
-                        ref_i_neg  = index - 1;
+                        var ref_i_pos1 = index + 1,
+                            ref_i_pos2 = index + 2,
+                            ref_i_pos3 = index + 3,
+                            ref_i_neg = index - 1;
                         break;
                 }
 
                 imgs_container[ref_i_neg].classList.remove('semileft');
                 imgs_container[ref_i_neg].classList.add('left');
-                
+
                 imgs_container[ref_i_pos1].classList.remove('center');
                 imgs_container[ref_i_pos1].classList.add('right');
 
@@ -60,14 +60,14 @@ function rollCarousel(action){ //Number: 1-> back 2-> next
                 imgs_container[ref_i_pos3].classList.add('semileft');
 
                 // imgs_container[ref_i_neg].style.transform = "perspective(50vw) translateX(-2vw) rotateY(-20deg) scale(0.9);";
-                
+
 
 
                 break;
             }
         }
     }
-    else{
+    else {
         for (let index = 0; index < imgs_container.length; index++) {
             if (imgs_container[index].classList.contains('right')) {
                 imgs_container[index].classList.remove('right');
@@ -84,34 +84,34 @@ function rollCarousel(action){ //Number: 1-> back 2-> next
                         var ref_i_neg1 = 4,
                             ref_i_neg2 = 3,
                             ref_i_neg3 = 2,
-                            ref_i_pos  = index + 1;
+                            ref_i_pos = index + 1;
                         break;
                     case 1:
                         var ref_i_neg1 = 0,
                             ref_i_neg2 = 4,
                             ref_i_neg3 = 3,
-                            ref_i_pos  = index + 1;
+                            ref_i_pos = index + 1;
                         break;
-                    case 2: 
-                    var ref_i_neg1 = 1,
-                        ref_i_neg2 = 0,
-                        ref_i_neg3 = 4,
-                        ref_i_pos  = index + 1;
+                    case 2:
+                        var ref_i_neg1 = 1,
+                            ref_i_neg2 = 0,
+                            ref_i_neg3 = 4,
+                            ref_i_pos = index + 1;
                         break;
 
                         break;
-                
+
                     default:
-                    var ref_i_neg1 = index - 1,
-                        ref_i_neg2 = index - 2,
-                        ref_i_neg3 = index - 3,
-                        ref_i_pos  = index + 1;
+                        var ref_i_neg1 = index - 1,
+                            ref_i_neg2 = index - 2,
+                            ref_i_neg3 = index - 3,
+                            ref_i_pos = index + 1;
                         break;
                 }
 
                 imgs_container[ref_i_pos].classList.remove('semiright');
                 imgs_container[ref_i_pos].classList.add('right');
-                
+
                 imgs_container[ref_i_neg1].classList.remove('center');
                 imgs_container[ref_i_neg1].classList.add('left');
 
@@ -131,17 +131,30 @@ function rollCarousel(action){ //Number: 1-> back 2-> next
 
 
 
+var name_space = document.querySelector('#name_field'),
+    names = ["Angelo Schuler Piletti", "Guilherme Pacheco", "Rayssa (foi mal, não lembro)", "Vinícius Heller", "Thiago Quevedo dos Santos"],
+    imgs = document.querySelectorAll('.img_container');
+
+function setNameOnField() {
+    imgs.forEach(img => {
+        if (img.classList.contains('center')) {
+            var indexOfImgOnCenter = img.id.match(/[0-9]{1}/)[0];
+            name_space.innerHTML = names[indexOfImgOnCenter];
+        }
+    });
+}
 
 
 
+setNameOnField();
 
-
-
-back.addEventListener('click', ()=>{
+back.addEventListener('click', () => {
     rollCarousel(1);
+    setNameOnField();
 });
-next.addEventListener('click', ()=>{
+next.addEventListener('click', () => {
     rollCarousel(2);
+    setNameOnField();
 })
 
 

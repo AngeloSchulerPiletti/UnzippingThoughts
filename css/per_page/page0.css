@@ -116,7 +116,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 6vw;
+  gap: 8vw;
 }
 #sec3 .text_format1{
   display: flex;
@@ -126,7 +126,13 @@
 #sec3 .text_format1 h2{
   width: fit-content;
 }
-.carousel_container{
-  
+#carousel_container #carousel{
+    height: 32vw; /*Deve ser alterado*/
+  }
+#colaborator_name{
+  margin: auto auto 3vw auto;
+  width: 50%;
+  text-align: center;
+  font-size: 1.6vw;
 }
 /*================= SEC3 ================*/
