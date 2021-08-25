@@ -40,7 +40,7 @@ function settingPageXMetaElements(page_index) {
     var pageMetaPlace = document.querySelector('.page_meta');
 
     setStyle(pageMetaPlace, 'per_page/page' + page_index + '.css');
-    setScript(pageMetaPlace, 'js/per_page/page' + page_index + '.js', 'module');
+    setScript(pageMetaPlace, 'per_page/page' + page_index + '.js', 'module');
 
     switch (page_index) {
         case 0:

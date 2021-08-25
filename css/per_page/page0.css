@@ -1,3 +1,6 @@
+.page_content{
+  position: relative;
+}
 
 #content_container{
   z-index: 10;

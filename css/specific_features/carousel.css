@@ -4,24 +4,75 @@
     position: relative;
     width: 100%;
     height: 25vw; /*Deve ser alterado*/
+
+    transform-style: preserve-3d;
 }
-.img_container{
-    width: 25vw;
-    height: 25vw;
-    background-color: black;
+.actions{
+
+}
+.actions button{
+    border-radius: 50%;
+    padding: 0.5vw;
 
     position: absolute;
+    top: 50%;
+
+    transition: background-color 500ms;
 }
+.actions button:hover{
+    background-color: var(--green2);
+    cursor: pointer;
+}
+#btn_left{
+    left: -3vw;
+    transform: translate(-100%, -50%);
+}
+#btn_right{
+    right: -3vw;
+    transform: translate(100%, -50%);
+}
+.arrow{
+    width: 3vw;
+    height: 3vw;
+}
+.ar_left{
+    transform: translateX(-10%);
+}
+.ar_right{
+    transform: scaleX(-1) translateX(-10%);
+
+}
+.img_container{
+    position: absolute;
+}
+.img_container img{
+    width: 25vw;
+    height: 25vw;
+    object-fit: cover;
+    
+    /* mask-image: ; */
+}
+
+/*---------------- anim classes --------------*/
 #carousel .hide{
     opacity: 0;
 }
+#carousel .left img{
+    -webkit-mask-image:-webkit-gradient(linear, right bottom, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+} 
+#carousel .right img{
+    -webkit-mask-image:-webkit-gradient(linear, left bottom, right bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
 #carousel .left{
     left: 0;
+    transform: perspective(50vw) translateX(-2vw) rotateY(-20deg) scale(0.9);
 }
 #carousel .center{
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(1.2);
+
 }
 #carousel .right{
     right: 0;
+    transform: perspective(50vw) translateX(2vw) rotateY(20deg) scale(0.9);
 }
