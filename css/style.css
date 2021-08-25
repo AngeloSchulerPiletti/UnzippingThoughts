@@ -10,6 +10,15 @@
     --green1_op: #43D993B0;
     --black: #0D0D0D;
 }
+/* Logo FONTS */
+@font-face {
+    font-family: 'makenosense';
+    src: url(/assets/fonts/makenosense.otf);
+}
+@font-face {
+    font-family: 'youaremyevery';
+    src: url(/assets/fonts/youaremyevery.ttf);
+}
 /* -------------- LAYOUT DA PÁGINA -----------*/
 body{
     min-height: 100vh;
@@ -54,8 +63,12 @@ header{
     display: grid;
     grid-template-columns: 2fr 7fr 2fr;
     padding: 2vw 4vw 2vw 4vw;
+    align-items: center;
 
     color: var(--white);
+}
+.left #header_logo{
+    height: 100%;
 }
 .center nav{
     display: flex;
