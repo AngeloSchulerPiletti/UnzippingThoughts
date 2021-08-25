@@ -31,11 +31,11 @@
     fill: var(--black);
 }
 #btn_left{
-    left: -3vw;
+    left: 0vw;
     transform: translate(-100%, -50%);
 }
 #btn_right{
-    right: -3vw;
+    right: 0vw;
     transform: translate(100%, -50%);
 }
 .arrow{
@@ -50,8 +50,8 @@
 
 }
 .img_container img{
-    width: 25vw;
-    height: 25vw;
+    width: 20vw;
+    height: 20vw;
     object-fit: cover;
     
     /* mask-image: ; */
@@ -72,32 +72,81 @@
 
     transition: transform 1000ms ease-in-out, left 800ms ease-in-out, right 800ms ease-in-out, opacity 400ms ease-in;
 }
+.img_container.center::before{
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: transparent;
+    color: transparent;
+
+    transition: background-color 300ms ease-in-out, color 400ms ease-in-out;
+}
+.img_container.center:hover::before{
+    content: "";
+
+    background-color: var(--green1_op);
+    color: var(--black);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw;
+
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    line-height: 1.2em;
+
+    cursor: pointer;
+}
+.img_container.center#img_c0:hover::before{ /*ANGELO*/
+    content: "Conhecido por seus grandes feitos durante o Bug do Milênio";
+}
+.img_container.center#img_c1:hover::before{ /*GUILHERME*/
+    content: "Chupisco";
+}
+.img_container.center#img_c2:hover::before{ /*RAYSSA*/
+    content: "Chupisco";
+}
+.img_container.center#img_c3:hover::before{ /*VINICIUS*/
+    content: "Chupisco";
+}
+.img_container.center#img_c4:hover::before{ /*THIAGO*/
+    content: "Chupisco";
+}
+
 /*---------------- anim classes --------------*/
 #carousel .semileft{
     left: -10%;
     opacity: 0;
-    transform: perspective(20vw) translateX(-10vw) translateZ(-1vw) rotateY(-20deg) scale(0.7);
+    transform: perspective(20vw) translateX(-10vw) translateZ(-1vw) rotateY(-20deg) scale(0.5);
 }
 #carousel .semiright{
     left: 79%;
     opacity: 0;
-    transform: perspective(50vw) translateX(10vw) translateZ(-1vw) rotateY(20deg) scale(0.7);
+    transform: perspective(50vw) translateX(10vw) translateZ(-1vw) rotateY(20deg) scale(0.5);
 }
 #carousel .left{
     opacity: 1;
-    left: 0;
-    transform: perspective(50vw) translateX(-2vw) rotateY(-20deg) scale(0.9);
+    left: 11%;
+    transform: perspective(50vw) translateX(-2vw) rotateY(-20deg) scale(0.8);
 }
 #carousel .center{
     opacity: 1;
-    left: 34.5%;
+    left: 37.5%;
     transform: translateZ(10vw) scale(1.2);
 
 }
 #carousel .right{
     opacity: 1;
-    left: 69%;
-    transform: perspective(50vw) translateX(2vw) rotateY(20deg) scale(0.9);
+    left: 64%;
+    transform: perspective(50vw) translateX(2vw) rotateY(20deg) scale(0.8);
 }
 
 

@@ -110,12 +110,12 @@
 /*================= SEC3 ================*/
 #sec3{
   background-color: var(--white);
-  padding: 5vw 10vw 5vw 10vw;
+  padding: 5vw 10vw 2vw 10vw;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 8vw;
+  gap: 5vw;
 }
 #sec3 .text_format1{
   display: flex;
@@ -126,7 +126,7 @@
   width: fit-content;
 }
 #carousel_container #carousel{
-    height: 32vw; /*Deve ser alterado*/
+    height: 25vw; /*Deve ser alterado*/
   }
 #colaborator_name{
   margin: auto auto 3vw auto;
