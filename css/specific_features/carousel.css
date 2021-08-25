@@ -10,7 +10,7 @@
 .actions{
 
 }
-.actions button{
+.ar_btn{
     border-radius: 50%;
     padding: 0.5vw;
 
@@ -19,7 +19,7 @@
 
     transition: background-color 500ms;
 }
-.actions button:hover{
+.ar_btn:hover{
     background-color: var(--green2);
     cursor: pointer;
 }
@@ -59,9 +59,11 @@
 }
 #carousel .left img{
     -webkit-mask-image:-webkit-gradient(linear, right bottom, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,0));
 } 
 #carousel .right img{
     -webkit-mask-image:-webkit-gradient(linear, left bottom, right bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(-90deg, rgba(0,0,0,1), rgba(0,0,0,0));
 }
 #carousel .left{
     left: 0;
@@ -76,3 +78,17 @@
     right: 0;
     transform: perspective(50vw) translateX(2vw) rotateY(20deg) scale(0.9);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================= ANIMATIONS ===============*/
