@@ -1,16 +1,4 @@
-#particles-js{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  
-    top: 0;
-  
-    background-color: var(--black);
-    background-image: url('');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-  }
+
 #content_container{
   z-index: 10;
   position: relative;
@@ -55,7 +43,6 @@
 /*================= SEC2 ================*/
 #sec2{
   background-color: var(--white);
-  width: 100%;
   padding: 5vw 10vw 5vw 10vw;
 
   display: flex;
@@ -68,14 +55,34 @@
   background-color: var(--black);
 }
 .flex_conj{
-  padding: 4vw 0;
   width: 30vw;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2vw;
 }
-.flex_conj p{
+.flex_conj .text_format1{
+  display: flex;
+  flex-direction: column;
+  gap: 4vw;
+}
+.text_format1 h2{
+  font-size: 3vw;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  position: relative;
+}
+.text_format1 h2::before{
+  content: "";
+  position: absolute;
+  top: -0.8vw;
+  left: 0;
+  width: 30%;
+  border: 2px solid var(--green1);
+}
+.text_format1 p{
   font-size: 1.6vw;
   font-weight: 300;
   line-height: 1.5em;
@@ -83,15 +90,37 @@
 
   position: relative;
 }
-.flex_conj p::after{
+#sec2 .text_format1 p::after{
   content: "";
   width: 2vw;
   height: 2vw;
   position: absolute;
-  left: -2vw;
-  top: -2vw;
-  border-top: 2px solid var(--green1);
-  border-left: 2px solid var(--green1);
+  right: -2vw;
+  bottom: -2vw;
+  border-bottom: 2px solid var(--green1);
+  border-right: 2px solid var(--green1);
 }
 /*================= SEC2 ================*/
 
+
+
+
+/*================= SEC3 ================*/
+#sec3{
+  background-color: var(--white);
+  padding: 5vw 10vw 5vw 10vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 6vw;
+}
+#sec3 .text_format1{
+  display: flex;
+  flex-direction: column;
+  gap: 1.6vw;
+}
+.carousel_container{
+  
+}
+/*================= SEC3 ================*/
