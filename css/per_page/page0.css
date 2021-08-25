@@ -123,6 +123,9 @@
   flex-direction: column;
   gap: 1.6vw;
 }
+#sec3 .text_format1 h2{
+  width: fit-content;
+}
 .carousel_container{
   
 }

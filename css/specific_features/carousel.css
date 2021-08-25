@@ -23,6 +23,14 @@
     background-color: var(--green2);
     cursor: pointer;
 }
+.arrow path{
+    fill: var(--green1);
+
+    transition: fill 500ms;
+}
+.ar_btn:hover .arrow path{
+    fill: var(--black);
+}
 #btn_left{
     left: -3vw;
     transform: translate(-100%, -50%);
@@ -36,10 +44,10 @@
     height: 3vw;
 }
 .ar_left{
-    transform: translateX(-10%);
+    transform: translate(-10%, 2%);
 }
 .ar_right{
-    transform: scaleX(-1) translateX(-10%);
+    transform: scaleX(-1) translate(-10%, 2%);
 
 }
 .img_container img{
