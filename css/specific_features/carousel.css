@@ -74,12 +74,14 @@
 }
 /*---------------- anim classes --------------*/
 #carousel .semileft{
-    left: 0;
+    left: -10%;
     opacity: 0;
+    transform: perspective(20vw) translateX(-10vw) translateZ(-1vw) rotateY(-20deg) scale(0.7);
 }
 #carousel .semiright{
-    left: 69%;
+    left: 79%;
     opacity: 0;
+    transform: perspective(50vw) translateX(10vw) translateZ(-1vw) rotateY(20deg) scale(0.7);
 }
 #carousel .left{
     opacity: 1;
