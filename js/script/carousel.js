@@ -132,7 +132,7 @@ function rollCarousel(action) { //Number: 1-> back 2-> next
 
 
 var name_space = document.querySelector('#name_field'),
-    names = ["Angelo Schuler Piletti", "Guilherme Pacheco", "Rayssa (foi mal, não lembro)", "Vinícius Heller", "Thiago Quevedo dos Santos"],
+    names = ["Angelo Schuler Piletti", "Guilherme Pacheco", "Rayssa Rodrigues", "Vinícius Heller", "Thiago Quevedo dos Santos"],
     imgs = document.querySelectorAll('.img_container');
 
 function setNameOnField() {
