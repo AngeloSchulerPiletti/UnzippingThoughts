@@ -105,12 +105,68 @@
   left: -0.6vw;
 }
 /*code button2*/
+/*+------------------------------+
+  |            BOTÕES            |
+  +------------------------------+*/
 
 
 
+
+/*+------------------------------+
+  |          FONT STYLE          |
+  +------------------------------+*/
 /*marcações curtas*/
 .highlighter{
   color: var(--green1);
   font-weight: 800;
 }
 /*marcações curtas*/
+/*+------------------------------+
+  |          FONT STYLE          |
+  +------------------------------+*/
+
+
+
+/*+------------------------------+
+  |         TITLE STYLE          |
+  +------------------------------+*/
+/*title upperline*/
+.upperline_h2{
+  font-size: 3vw;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: fit-content;
+
+  position: relative;
+}
+.upperline_h2::before{
+  content: "";
+  position: absolute;
+  top: -0.8vw;
+  left: 0;
+  width: 30%;
+  border: 2px solid var(--green1);
+}
+/*title upperline*/
+
+/*title sideline*/
+.sideline_h2{
+  font-size: 3vw;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: fit-content;
+
+  position: relative;
+}
+.sideline_h2::before{
+  content: "";
+  position: absolute;
+  top: -0.8vw;
+  left: 0;
+  height: 100%;
+  border-left: 4px solid var(--green1);
+}
+/*title sideline*/
+/*+------------------------------+
+  |         TITLE STYLE          |
+  +------------------------------+*/
