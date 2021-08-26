@@ -36,3 +36,22 @@
      width: 20vw;
      height: 20vw;
  }
+
+ .text_format1 h1{
+     font-size: 2vw;
+     text-transform: uppercase;
+ }
+
+ .text_format1 h2{
+    font-size: 1.8vw;
+ }
+
+ .text_format1 p{
+    font-size: 1.6vw;
+    font-weight: 300;
+    line-height: 1.5em;
+    text-align: justify;
+  
+    position: relative;
+  }
+
