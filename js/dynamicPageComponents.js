@@ -1,24 +1,46 @@
 /* =========================== LINK LOADS ======================== */
 /* ----------------------- INICIO link loads --------------------- */
-function setLinkOnInicio(){
-    var carousel_imgs = document.querySelectorAll('.img_container');
+function setLinkOnInicio() {
+    let carousel_imgs = document.querySelectorAll('.img_container'),
+        carousel_btns = document.querySelectorAll('.arrow');
     carousel_imgs.forEach(img => {
-        img.addEventListener('click', function(){
-            loadPageX(1);
+        if (img.classList.contains('center')) {
+            img.addEventListener('click', loadPageX);
+            img.param = 1;
+        }
+    });
+
+    carousel_btns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            setTimeout(() => {
+                let carousel_imgs = document.querySelectorAll('.img_container'),
+                    carousel_btns = document.querySelectorAll('.arrow');
+
+                carousel_imgs.forEach(img => {
+                    if (img.classList.contains('center')) {
+                        img.addEventListener('click', loadPageX);
+                        img.param = 1;
+                    }
+                    else{
+                        img.removeEventListener('click', loadPageX);
+                    }
+                });
+            }, 100);
         });
     });
 
+
     var tec_btn = document.querySelector('#tecnical_btn'),
         com_btn = document.querySelector('#comportamental_btn');
-    tec_btn.addEventListener('click', function(){
+    tec_btn.addEventListener('click', function () {
         loadPageX(2);
     });
-    com_btn.addEventListener('click', function(){
+    com_btn.addEventListener('click', function () {
         loadPageX(4);
     });
 
     var sobresite_btn = document.querySelector('#sobresite_btn');
-    sobresite_btn.addEventListener('click', function(){
+    sobresite_btn.addEventListener('click', function () {
         loadPageX(5);
     });
 }
@@ -55,17 +77,19 @@ function makeRequest(page_index) {
     });
 }
 async function loadPageX(page_index) {
-    makeRequest(page_index).then(value =>{
+    var index = typeof page_index == 'object' ? page_index.target.param : page_index;
+    
+    makeRequest(index).then(value => {
         document.querySelector('main').innerHTML = value;
-        settingPageXMetaElements(page_index);
-        settingPageXTitle(page_index);
+        settingPageXMetaElements(index);
+        settingPageXTitle(index);
         showingTargetPage();
 
-        switch (page_index) {
+        switch (index) {
             case 0:
                 setLinkOnInicio();
                 break;
-        
+
             default:
                 break;
         }
@@ -127,15 +151,15 @@ function showingTargetPage() {
 
 
 /* ===================== USEFUL SETTING FUNCS ================== */
-function setScript(placeToInsert, src, type="application/javascript") {
+function setScript(placeToInsert, src, type = "application/javascript") {
     var script_js = document.createElement('script');
-    script_js.setAttribute('src', '/js/'+src);
+    script_js.setAttribute('src', '/js/' + src);
     script_js.setAttribute('type', type);
     placeToInsert.appendChild(script_js);
 }
-function setStyle(placeToInsert, src, rel="stylesheet") {
+function setStyle(placeToInsert, src, rel = "stylesheet") {
     var style_css = document.createElement('link');
-    style_css.setAttribute('href', '/css/'+src);
+    style_css.setAttribute('href', '/css/' + src);
     style_css.setAttribute('rel', rel);
     placeToInsert.appendChild(style_css);
 }
@@ -154,7 +178,7 @@ function setStyle(placeToInsert, src, rel="stylesheet") {
 /*+-------------------------------------------+
   |                 FIRST LOAD                |
   +-------------------------------------------+ */
-window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', function () {
     loadPageX(0);
 })
 
