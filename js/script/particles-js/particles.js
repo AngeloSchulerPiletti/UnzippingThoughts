@@ -1541,7 +1541,7 @@ window.particlesJS = function (tag_id, params) {
 var particles_json = {
   "particles": {
     "number": {
-      "value": 140,
+      "value": 70,
       "density": {
         "enable": true,
         "value_area": 800

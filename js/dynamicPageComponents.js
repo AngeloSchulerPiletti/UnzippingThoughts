@@ -65,6 +65,7 @@ var titles = [
     "Page 1",
     "Page 2",
     "Page 3",
+    "Page 4",
 ];
 function settingPageXTitle(page_index) {
     document.querySelector('title').innerHTML = titles[page_index];
