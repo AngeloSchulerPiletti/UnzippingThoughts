@@ -44,6 +44,15 @@
 
  .text_format1 h2{
     font-size: 1.8vw;
+    font-weight: bold;
+ }
+
+ .text_format1 h3{
+   font-size: 1.7vw;
+ }
+
+ .text_format1 h4{
+   font-size: 1.65vw;
  }
 
  .text_format1 p{
