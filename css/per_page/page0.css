@@ -163,3 +163,12 @@
   animation-play-state: paused;
 }
 /*================= SEC4 ================*/
+
+
+/* ================ SEC5 ================*/
+#sec5{
+  align-items: center;
+  justify-content: center;
+  margin: 2vw 0 5vw 0;
+}
+/* ================ SEC5 ================*/

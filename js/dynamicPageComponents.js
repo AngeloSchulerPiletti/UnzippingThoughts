@@ -40,11 +40,13 @@ function setLinkOnInicio() {
 
     var tec_btn = document.querySelector('#tecnical_btn'),
         com_btn = document.querySelector('#comportamental_btn'),
-        sobresite_btn = document.querySelector('#sobresite_btn');
+        sobresite_btn = document.querySelector('#sobresite_btn'),
+        contactus_btn = document.querySelector('#contact_us');
 
     settingEventListener(tec_btn, 2);
     settingEventListener(com_btn, 4);
     settingEventListener(sobresite_btn, 5);
+    settingEventListener(contactus_btn, 3);
 }
 /* ----------------------- INICIO link loads --------------------- */
 /* =========================== LINK LOADS ======================== */

@@ -154,9 +154,27 @@
 .bigawesome_button:hover::after{
   border-right: 2px solid var(--green1);
   height: calc(100% + 1vw);
-} 
-
+}
 /*big awesome anim button*/
+/*the biggest button*/
+.thebiggest_btn{
+  background-color: var(--white);
+  color: var(--green1);
+
+  box-shadow: 0 0 1.2vw var(--green1);
+  padding: 0.6vw 3vw;
+
+  font-size: 3vw;
+
+  transition: color 300ms, background-color 300ms, box-shadow 500ms 100ms;
+}
+.thebiggest_btn:hover{
+  cursor: pointer;
+  box-shadow: 0 0 0.4vw var(--green1);
+  color: var(--white);
+  background-color: var(--green1); 
+}
+/*the biggest button*/
 /*+------------------------------+
   |            BOTÕES            |
   +------------------------------+*/
@@ -171,6 +189,11 @@
 .highlighter{
   color: var(--green1);
   font-weight: 800;
+}
+.intoTitle{
+  font-weight: 500;
+  font-family: 'Oswald';
+  text-transform: uppercase;
 }
 /*marcações curtas*/
 /*+------------------------------+
