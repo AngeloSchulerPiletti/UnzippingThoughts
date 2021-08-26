@@ -10,12 +10,16 @@ function setLinkOnInicio(){
 
     var tec_btn = document.querySelector('#tecnical_btn'),
         com_btn = document.querySelector('#comportamental_btn');
-
     tec_btn.addEventListener('click', function(){
         loadPageX(2);
     });
     com_btn.addEventListener('click', function(){
         loadPageX(4);
+    });
+
+    var sobresite_btn = document.querySelector('#sobresite_btn');
+    sobresite_btn.addEventListener('click', function(){
+        loadPageX(5);
     });
 }
 /* ----------------------- INICIO link loads --------------------- */
