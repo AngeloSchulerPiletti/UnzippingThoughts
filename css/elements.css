@@ -62,3 +62,8 @@
 }
 /*code button*/
 
+/*marcações curtas*/
+.highlighter{
+  color: var(--green1);
+  font-weight: 800;
+}
