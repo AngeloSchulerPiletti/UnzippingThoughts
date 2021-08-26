@@ -1,48 +1,50 @@
-/* =========================== LINK LOADS ======================== */
-/* ----------------------- INICIO link loads --------------------- */
-function setLinkOnInicio() {
-    let carousel_imgs = document.querySelectorAll('.img_container'),
-        carousel_btns = document.querySelectorAll('.arrow');
+/* ======================= FATORING FUNCTIONS =================== */
+/* -------------------- link set onimgs ----------------*/
+function setLinksOnImgs(param, remove=false) {
+    let carousel_imgs = document.querySelectorAll('.img_container');
     carousel_imgs.forEach(img => {
         if (img.classList.contains('center')) {
             img.addEventListener('click', loadPageX);
-            img.param = 1;
+            img.param = param;
+        }
+        else if(remove){
+            img.removeEventListener('click', loadPageX);
         }
     });
+}
+/* -------------------- link set onimgs ----------------*/
+/* ----------------- link set on elements --------------*/
+function settingEventListener(element, index){
+    element.addEventListener('click', function(){
+        loadPageX(index);
+    })
+}
+/* ----------------- link set on elements --------------*/
+/* ======================= FATORING FUNCTIONS =================== */
+
+
+/* =========================== LINK LOADS ======================== */
+/* ----------------------- INICIO link loads --------------------- */
+function setLinkOnInicio() {
+    var carousel_btns = document.querySelectorAll('.arrow');
+
+    setLinksOnImgs(1);
 
     carousel_btns.forEach(btn => {
         btn.addEventListener('click', function () {
             setTimeout(() => {
-                let carousel_imgs = document.querySelectorAll('.img_container'),
-                    carousel_btns = document.querySelectorAll('.arrow');
-
-                carousel_imgs.forEach(img => {
-                    if (img.classList.contains('center')) {
-                        img.addEventListener('click', loadPageX);
-                        img.param = 1;
-                    }
-                    else{
-                        img.removeEventListener('click', loadPageX);
-                    }
-                });
+                setLinksOnImgs(1, true);
             }, 100);
         });
     });
 
-
     var tec_btn = document.querySelector('#tecnical_btn'),
-        com_btn = document.querySelector('#comportamental_btn');
-    tec_btn.addEventListener('click', function () {
-        loadPageX(2);
-    });
-    com_btn.addEventListener('click', function () {
-        loadPageX(4);
-    });
+        com_btn = document.querySelector('#comportamental_btn'),
+        sobresite_btn = document.querySelector('#sobresite_btn');
 
-    var sobresite_btn = document.querySelector('#sobresite_btn');
-    sobresite_btn.addEventListener('click', function () {
-        loadPageX(5);
-    });
+    settingEventListener(tec_btn, 2);
+    settingEventListener(com_btn, 4);
+    settingEventListener(sobresite_btn, 5);
 }
 /* ----------------------- INICIO link loads --------------------- */
 /* =========================== LINK LOADS ======================== */
@@ -78,7 +80,7 @@ function makeRequest(page_index) {
 }
 async function loadPageX(page_index) {
     var index = typeof page_index == 'object' ? page_index.target.param : page_index;
-    
+
     makeRequest(index).then(value => {
         document.querySelector('main').innerHTML = value;
         settingPageXMetaElements(index);
@@ -164,8 +166,6 @@ function setStyle(placeToInsert, src, rel = "stylesheet") {
     placeToInsert.appendChild(style_css);
 }
 /* ===================== USEFUL SETTING FUNCS ================== */
-
-
 
 
 
