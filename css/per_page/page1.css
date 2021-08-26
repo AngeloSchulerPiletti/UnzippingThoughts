@@ -42,7 +42,10 @@
      width: 20vw;
      height: 20vw;
  }
- h2 ::before{
+ h2{
+   position: relative;
+ }
+ h2::before{
   content: "";
   position: absolute;
   width: 26vw;
@@ -50,5 +53,4 @@
   background-color: var(--green1);
   right: 3vw;
   top: -1.5vw;
-  z-index: -1;
  }
