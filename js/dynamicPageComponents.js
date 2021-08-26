@@ -1,21 +1,21 @@
 /* ======================= FATORING FUNCTIONS =================== */
 /* -------------------- link set onimgs ----------------*/
-function setLinksOnImgs(param, remove=false) {
+function setLinksOnImgs(param, remove = false) {
     let carousel_imgs = document.querySelectorAll('.img_container');
     carousel_imgs.forEach(img => {
         if (img.classList.contains('center')) {
             img.addEventListener('click', loadPageX);
             img.param = param;
         }
-        else if(remove){
+        else if (remove) {
             img.removeEventListener('click', loadPageX);
         }
     });
 }
 /* -------------------- link set onimgs ----------------*/
 /* ----------------- link set on elements --------------*/
-function settingEventListener(element, index){
-    element.addEventListener('click', function(){
+function settingEventListener(element, index) {
+    element.addEventListener('click', function () {
         loadPageX(index);
     })
 }
@@ -41,7 +41,8 @@ function setLinkOnInicio() {
     var tec_btn = document.querySelector('#tecnical_btn'),
         com_btn = document.querySelector('#comportamental_btn'),
         sobresite_btn = document.querySelector('#sobresite_btn'),
-        contactus_btn = document.querySelector('#contact_us');
+        contactus_btn = document.querySelector('.contact_us');
+
 
     settingEventListener(tec_btn, 2);
     settingEventListener(com_btn, 4);
@@ -174,14 +175,23 @@ function setStyle(placeToInsert, src, rel = "stylesheet") {
 
 
 
-
+/* ============= DEV MODE FUNCTION ============ */
+function callDevModule() {
+    try {
+        return import("/js/script/devMode.js");
+    }
+    catch (error) {console.log(error);}
+}
+/* ============= DEV MODE FUNCTION ============ */
 
 
 /*+-------------------------------------------+
   |                 FIRST LOAD                |
   +-------------------------------------------+ */
 window.addEventListener('DOMContentLoaded', function () {
-    loadPageX(0);
+    callDevModule().then((rtrn) => {
+        loadPageX(isNaN(rtrn.PAGE) ? 0 : rtrn.PAGE);
+    });
 })
 
 
