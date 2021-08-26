@@ -2,11 +2,21 @@
 /* ----------------------- INICIO link loads --------------------- */
 function setLinkOnInicio(){
     var carousel_imgs = document.querySelectorAll('.img_container');
-    for (let index = 0; index < carousel_imgs.length; index++) {
-        carousel_imgs[index].addEventListener('click', function(){
+    carousel_imgs.forEach(img => {
+        img.addEventListener('click', function(){
             loadPageX(1);
         });
-    }
+    });
+
+    var tec_btn = document.querySelector('#tecnical_btn'),
+        com_btn = document.querySelector('#comportamental_btn');
+
+    tec_btn.addEventListener('click', function(){
+        loadPageX(2);
+    });
+    com_btn.addEventListener('click', function(){
+        loadPageX(4);
+    });
 }
 /* ----------------------- INICIO link loads --------------------- */
 /* =========================== LINK LOADS ======================== */
