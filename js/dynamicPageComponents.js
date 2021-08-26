@@ -25,7 +25,6 @@ function makeRequest(page_index) {
 }
 async function loadPageX(page_index) {
     makeRequest(page_index).then(value =>{
-        console.log(value);
         document.querySelector('main').innerHTML = value;
         settingPageXMetaElements(page_index);
         settingPageXTitle(page_index);
@@ -65,6 +64,7 @@ var titles = [
     "Page 1",
     "Page 2",
     "Page 3",
+    "Page 4",
 ];
 function settingPageXTitle(page_index) {
     document.querySelector('title').innerHTML = titles[page_index];
