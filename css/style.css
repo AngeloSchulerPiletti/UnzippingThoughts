@@ -141,7 +141,7 @@ footer #footer_content{
     flex-direction: column;
     justify-content: flex-end;
 
-    padding: 8vh 0 8vh 0;
+    padding: 8vh 0 6vh 0;
     background-color: var(--white);
     
     text-align: center;
@@ -149,10 +149,14 @@ footer #footer_content{
 }
 #footer_content h1{
     font-size: 2vw;
+    margin-bottom: 2vw;
 }
 #list_container{
     display: flex;
     justify-content: space-around;
+}
+#copyright{
+    margin-top: 5vw;
 }
 /* -------------- FOOTER --------------*/
 /*
