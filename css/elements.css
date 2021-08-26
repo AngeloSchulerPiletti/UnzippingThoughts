@@ -62,8 +62,55 @@
 }
 /*code button*/
 
+
+
+/*code button2*/
+.code_button2{
+    position: relative;
+
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-size: 1.8vw;
+    width: fit-content;
+
+    color: var(--white);
+    background-color: var(--green1);
+
+    padding: 0.5vw 2vw;
+    border-top-right-radius: 0.6vw;
+    border-bottom-right-radius: 0.6vw;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 0.5vw var(--green2);
+
+    transition: box-shadow 400ms;
+
+}
+.code_button2::before{
+  content: "";
+  position: absolute;
+  left: 0vw;
+  top: 0;
+  border-left: 4px solid var(--green1);
+  height: 100%;
+
+  transition: left 300ms;
+}
+.code_button2:hover{
+  box-shadow: 0 0 0.1vw var(--green2);
+}
+.code_button2:hover::before{
+  left: -0.6vw;
+}
+/*code button2*/
+
+
+
 /*marcações curtas*/
 .highlighter{
   color: var(--green1);
   font-weight: 800;
 }
+/*marcações curtas*/

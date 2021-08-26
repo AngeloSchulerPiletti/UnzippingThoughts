@@ -1,3 +1,30 @@
+/* =========================== LINK LOADS ======================== */
+/* ----------------------- INICIO link loads --------------------- */
+function setLinkOnInicio(){
+    var carousel_imgs = document.querySelectorAll('.img_container');
+    carousel_imgs.forEach(img => {
+        img.addEventListener('click', function(){
+            loadPageX(1);
+        });
+    });
+
+    var tec_btn = document.querySelector('#tecnical_btn'),
+        com_btn = document.querySelector('#comportamental_btn');
+
+    tec_btn.addEventListener('click', function(){
+        loadPageX(2);
+    });
+    com_btn.addEventListener('click', function(){
+        loadPageX(4);
+    });
+}
+/* ----------------------- INICIO link loads --------------------- */
+/* =========================== LINK LOADS ======================== */
+
+
+
+
+
 /* ======================= REQUEST PROMISE ==================== */
 function makeRequest(page_index) {
     return new Promise(function (resolve, reject) {
@@ -29,6 +56,15 @@ async function loadPageX(page_index) {
         settingPageXMetaElements(page_index);
         settingPageXTitle(page_index);
         showingTargetPage();
+
+        switch (page_index) {
+            case 0:
+                setLinkOnInicio();
+                break;
+        
+            default:
+                break;
+        }
     });
 }
 /* ======================= REQUEST PROMISE ==================== */
@@ -110,8 +146,6 @@ function setStyle(placeToInsert, src, rel="stylesheet") {
 
 
 
-
-
 /*+-------------------------------------------+
   |                 FIRST LOAD                |
   +-------------------------------------------+ */
@@ -124,7 +158,6 @@ window.addEventListener('DOMContentLoaded', function(){
   |             CREATE THE LINKS              |
   +-------------------------------------------+ */
 var links = document.querySelectorAll('.nav_link');
-
 for (let index = 0; index < links.length; index++) {
     links[index].addEventListener('click', function () {
         loadPageX(index);

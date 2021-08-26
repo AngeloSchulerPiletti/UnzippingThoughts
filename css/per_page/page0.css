@@ -62,7 +62,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2vw;
+  gap: 5vw;
 }
 .flex_conj .text_format1{
   display: flex;
@@ -101,6 +101,10 @@
   bottom: -2vw;
   border-bottom: 2px solid var(--green1);
   border-right: 2px solid var(--green1);
+}
+#tf_actions{
+  display: flex;
+  justify-content: space-between;
 }
 /*================= SEC2 ================*/
 
