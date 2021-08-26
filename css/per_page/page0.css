@@ -102,6 +102,11 @@
   border-bottom: 2px solid var(--green1);
   border-right: 2px solid var(--green1);
 }
+
+.highlighter{
+  color: var(--green1);
+  font-weight: 800;
+}
 /*================= SEC2 ================*/
 
 
