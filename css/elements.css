@@ -10,9 +10,11 @@
     font-weight: 400;
     font-size: 1.8vw;
     width: fit-content;
+    height: fit-content;
 
     color: var(--white);
     background-color: var(--green1);
+    cursor: pointer;
 
     padding: 0.8vw 3vw;
 
@@ -50,15 +52,15 @@
 }
 .code_button:hover{
   background-color: var(--green2);
-  transform: translateX(20%);
+  transform: translateX(10%);
 }
 .code_button:hover::before{
   opacity: 1;
-  left: -2.5vw;
+  left: -1.5vw;
 }
 .code_button:hover::after{
   opacity: 1;
-  right: -2.5vw;
+  right: -1.5vw;
 }
 /*code button*/
 
@@ -73,6 +75,7 @@
     font-weight: 400;
     font-size: 1.8vw;
     width: fit-content;
+    height: fit-content;
 
     color: var(--white);
     background-color: var(--green1);
@@ -161,12 +164,26 @@
 .sideline_h2::before{
   content: "";
   position: absolute;
-  top: -0.8vw;
-  left: 0;
+  top: 0vw;
+  left: -1vw;
   height: 100%;
   border-left: 4px solid var(--green1);
 }
 /*title sideline*/
 /*+------------------------------+
   |         TITLE STYLE          |
+  +------------------------------+*/
+
+
+
+/*+------------------------------+
+  |       PARAGRAPH STYLE        |
+  +------------------------------+*/
+.simple_p{
+  font-size: 1.6vw;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+/*+------------------------------+
+  |       PARAGRAPH STYLE        |
   +------------------------------+*/

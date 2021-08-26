@@ -62,11 +62,7 @@
   gap: 4vw;
 }
 .text_format1 p{
-  font-size: 1.6vw;
-  font-weight: 300;
-  line-height: 1.5em;
   text-align: justify;
-
   position: relative;
 }
 #sec2 .text_format1 p::after{
@@ -108,3 +104,36 @@
   font-size: 1.6vw;
 }
 /*================= SEC3 ================*/
+
+
+
+
+/*================= SEC4 ================*/
+#sec4{
+  position: relative;
+
+  padding: 5vw 10vw 5vw 10vw;
+  background-color: var(--white);
+}
+#sec4::after{
+  content: "";
+  position: absolute;
+  width: 26vw;
+  height: 4vw;
+  background-color: var(--green1);
+  right: 3vw;
+  top: -1.5vw;
+  z-index: -1;
+}
+#site_container{
+  gap: 2vw;
+}
+#site_paragrah{
+  text-align: justify;
+  width: 40vw;
+}
+#sobresite_btn{
+  align-self: flex-end;
+  margin: 0 auto;
+}
+/*================= SEC4 ================*/
