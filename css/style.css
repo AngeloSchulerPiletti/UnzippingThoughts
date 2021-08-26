@@ -9,6 +9,8 @@
     --green2: #5EF275;
     --green1_op: #43D993B0;
     --black: #0D0D0D;
+    --toButton: #8e8cf7;
+    --toButton2: #5a43d9;
 }
 /* Logo FONTS */
 @font-face {
@@ -67,10 +69,10 @@ header{
 
     color: var(--white);
 }
-.left #header_logo{
+header .left #header_logo{
     height: 100%;
 }
-.center nav{
+header .center nav{
     display: flex;
     justify-content: center;
     gap: 1vw;
@@ -79,6 +81,7 @@ header{
     cursor: pointer;
     text-transform: uppercase;
     color: var(--white);
+    font-size: 1.1vw;
 
     transition: color 200ms ease-in-out;
 }
