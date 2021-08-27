@@ -1,26 +1,53 @@
+/* ======================= FATORING FUNCTIONS =================== */
+/* -------------------- link set onimgs ----------------*/
+function setLinksOnImgs(param, remove = false) {
+    let carousel_imgs = document.querySelectorAll('.img_container');
+    carousel_imgs.forEach(img => {
+        if (img.classList.contains('center')) {
+            img.addEventListener('click', loadPageX);
+            img.param = param;
+        }
+        else if (remove) {
+            img.removeEventListener('click', loadPageX);
+        }
+    });
+}
+/* -------------------- link set onimgs ----------------*/
+/* ----------------- link set on elements --------------*/
+function settingEventListener(element, index) {
+    element.addEventListener('click', function () {
+        loadPageX(index);
+    })
+}
+/* ----------------- link set on elements --------------*/
+/* ======================= FATORING FUNCTIONS =================== */
+
+
 /* =========================== LINK LOADS ======================== */
 /* ----------------------- INICIO link loads --------------------- */
-function setLinkOnInicio(){
-    var carousel_imgs = document.querySelectorAll('.img_container');
-    carousel_imgs.forEach(img => {
-        img.addEventListener('click', function(){
-            loadPageX(1);
+function setLinkOnInicio() {
+    var carousel_btns = document.querySelectorAll('.arrow');
+
+    setLinksOnImgs(1);
+
+    carousel_btns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            setTimeout(() => {
+                setLinksOnImgs(1, true);
+            }, 100);
         });
     });
 
     var tec_btn = document.querySelector('#tecnical_btn'),
-        com_btn = document.querySelector('#comportamental_btn');
-    tec_btn.addEventListener('click', function(){
-        loadPageX(2);
-    });
-    com_btn.addEventListener('click', function(){
-        loadPageX(4);
-    });
+        com_btn = document.querySelector('#comportamental_btn'),
+        sobresite_btn = document.querySelector('#sobresite_btn'),
+        contactus_btn = document.querySelector('.contact_us');
 
-    var sobresite_btn = document.querySelector('#sobresite_btn');
-    sobresite_btn.addEventListener('click', function(){
-        loadPageX(5);
-    });
+
+    settingEventListener(tec_btn, 2);
+    settingEventListener(com_btn, 4);
+    settingEventListener(sobresite_btn, 5);
+    settingEventListener(contactus_btn, 3);
 }
 /* ----------------------- INICIO link loads --------------------- */
 /* =========================== LINK LOADS ======================== */
@@ -55,17 +82,19 @@ function makeRequest(page_index) {
     });
 }
 async function loadPageX(page_index) {
-    makeRequest(page_index).then(value =>{
+    var index = typeof page_index == 'object' ? page_index.target.param : page_index;
+
+    makeRequest(index).then(value => {
         document.querySelector('main').innerHTML = value;
-        settingPageXMetaElements(page_index);
-        settingPageXTitle(page_index);
+        settingPageXMetaElements(index);
+        settingPageXTitle(index);
         showingTargetPage();
 
-        switch (page_index) {
+        switch (index) {
             case 0:
                 setLinkOnInicio();
                 break;
-        
+
             default:
                 break;
         }
@@ -127,15 +156,15 @@ function showingTargetPage() {
 
 
 /* ===================== USEFUL SETTING FUNCS ================== */
-function setScript(placeToInsert, src, type="application/javascript") {
+function setScript(placeToInsert, src, type = "application/javascript") {
     var script_js = document.createElement('script');
-    script_js.setAttribute('src', '/js/'+src);
+    script_js.setAttribute('src', '/js/' + src);
     script_js.setAttribute('type', type);
     placeToInsert.appendChild(script_js);
 }
-function setStyle(placeToInsert, src, rel="stylesheet") {
+function setStyle(placeToInsert, src, rel = "stylesheet") {
     var style_css = document.createElement('link');
-    style_css.setAttribute('href', '/css/'+src);
+    style_css.setAttribute('href', '/css/' + src);
     style_css.setAttribute('rel', rel);
     placeToInsert.appendChild(style_css);
 }
@@ -146,16 +175,23 @@ function setStyle(placeToInsert, src, rel="stylesheet") {
 
 
 
-
-
-
+/* ============= DEV MODE FUNCTION ============ */
+function callDevModule() {
+    try {
+        return import("/js/script/devMode.js");
+    }
+    catch (error) {console.log(error);}
+}
+/* ============= DEV MODE FUNCTION ============ */
 
 
 /*+-------------------------------------------+
   |                 FIRST LOAD                |
   +-------------------------------------------+ */
-window.addEventListener('DOMContentLoaded', function(){
-    loadPageX(0);
+window.addEventListener('DOMContentLoaded', function () {
+    callDevModule().then((rtrn) => {
+        loadPageX(isNaN(rtrn.PAGE) ? 0 : rtrn.PAGE);
+    });
 })
 
 

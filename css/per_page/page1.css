@@ -41,14 +41,23 @@
  img  {
      width: 20vw;
      height: 20vw;
+     border-radius: 8px;
  }
- h2 ::before{
+ .humanname{
+      position: absolute;
+      bottom: 8vw;
+      left: 10vw;
+      display: flex;
+    }
+ h2{
+   position: relative;
+ }
+ h2::before{
   content: "";
   position: absolute;
-  width: 26vw;
-  height: 4vw;
+  width: 22vw;
+  height: 1vw;
   background-color: var(--green1);
-  right: 3vw;
+  right: 1vw;
   top: -1.5vw;
-  z-index: -1;
  }
