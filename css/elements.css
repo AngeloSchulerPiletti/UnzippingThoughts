@@ -190,10 +190,18 @@
   color: var(--green1);
   font-weight: 800;
 }
+.highliter_upper{
+  color: var(--green1);
+  text-transform: uppercase;
+  font-family: 'Oswald';
+}
 .intoTitle{
   font-weight: 500;
   font-family: 'Oswald';
   text-transform: uppercase;
+}
+.italiquer{
+  font-style: italic;
 }
 /*marcações curtas*/
 /*+------------------------------+
@@ -206,7 +214,7 @@
   |         TITLE STYLE          |
   +------------------------------+*/
 /*title upperline*/
-.upperline_h2{
+.upperline{
   font-size: 3vw;
   font-weight: 500;
   text-transform: uppercase;
@@ -214,18 +222,18 @@
 
   position: relative;
 }
-.upperline_h2::before{
+.upperline::before{
   content: "";
   position: absolute;
   top: -0.8vw;
   left: 0;
   width: 30%;
-  border: 2px solid var(--green1);
+  border-top: 0.4vw solid var(--green1);
 }
 /*title upperline*/
 
 /*title sideline*/
-.sideline_h2{
+.sideline{
   font-size: 3vw;
   font-weight: 500;
   text-transform: uppercase;
@@ -233,15 +241,39 @@
 
   position: relative;
 }
-.sideline_h2::before{
+.sideline::before{
   content: "";
   position: absolute;
   top: 0vw;
   left: -1vw;
   height: 100%;
-  border-left: 4px solid var(--green1);
+  border-left: 0.3vw solid var(--green1);
 }
 /*title sideline*/
+/*title long upperline*/
+.long_upperline{
+  position: relative;
+
+  font-size: 5vw;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  width: 100%;
+  padding: 0.6vw 0 0 0;
+  color: var(--white);
+}
+.long_upperline::after{
+  content: "";
+  position: absolute;
+
+  /* top: 0;
+  left: 0;
+
+  width: 100%;
+  border-top: 0.25vw solid var(--green1); */
+
+}
+/*title long upperline*/
 /*+------------------------------+
   |         TITLE STYLE          |
   +------------------------------+*/
@@ -256,6 +288,40 @@
   font-weight: 300;
   line-height: 1.5em;
 }
+.text_p{
+  font-size: 1.4vw;
+  font-weight: 400;
+  line-height: 1.5em;
+}
 /*+------------------------------+
   |       PARAGRAPH STYLE        |
+  +------------------------------+*/
+
+
+
+  
+/*+------------------------------+
+  |        ELEMENTS STYLE        |
+  +------------------------------+*/
+  .vertex{
+    border-top-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+  }
+/*+------------------------------+
+  |        ELEMENTS STYLE        |
+  +------------------------------+*/
+
+
+
+
+/*+------------------------------+
+  |             LINES            |
+  +------------------------------+*/
+  .green_line{
+    border: none;
+    height: 2px;
+    background-color: var(--green1);
+  }
+/*+------------------------------+
+  |             LINES            |
   +------------------------------+*/
