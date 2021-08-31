@@ -1,0 +1,79 @@
+.page_content{
+    position: relative;
+}
+
+#content_container{
+    z-index: 10;
+    position: relative;
+
+    padding: 5vw 0 5vw 0;
+    margin: 10vw 0;
+    flex-direction: column;
+
+    gap: 7vw;
+}
+
+#sec1{
+    position: relative;
+    padding: 5vw 0 5vw 10vw;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+#title {
+    color: var(--white);
+    left: 1vw;
+}
+
+#sec2 {
+    position: relative;
+    background-color: var(--white);
+    padding: 5vw 10vw 5vw 10vw;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form .data{
+    display: block;
+    margin: 0.5vw 0;
+    height: 3vw;
+    width: 38vw;
+    font-size: 1.2vw;
+}
+
+.form #text_area{
+    width: 38.2vw;
+    height: 15vw;
+    font-size: 1.2vw;
+}
+
+
+#send_button{
+    display: flex;
+    justify-content: center;
+    margin: 3vw 0;
+    font-size: 2vw;
+    
+    width: 10vw;
+    height: 3.5vw;
+}
+
+.informations{
+    width: 30%;
+    position: absolute;
+    right: 8vw;
+    font-size: 1.5vw;
+}
+
+.informations p{
+     line-height: 1.8vw;
+}
+
+#sec2 .informations span{
+    font-size: 1.7vw;
+}
+
+
+

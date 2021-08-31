@@ -46,7 +46,7 @@ footer{
 }
 
 /* FONTS  */
-p, a, span, legend, label, li, div{
+p, a, span, legend, label, li, div, textarea{
     font-family: 'Roboto', sans-serif;
 }
 h1, h2, h3, h4, h5, h6{
