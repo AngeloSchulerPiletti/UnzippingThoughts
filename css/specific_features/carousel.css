@@ -118,7 +118,7 @@
     content: "Em caminho de paca, tatu caminha dentro";
 }
 .img_container.center#img_c4:hover::before{ /*THIAGO*/
-    content: "Sem frase";
+    content: "Desingner de página e programador front-end";
 }
 
 /*---------------- anim classes --------------*/
