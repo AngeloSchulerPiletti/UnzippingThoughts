@@ -131,7 +131,7 @@ function settingPageXMetaElements(page_index) {
 var titles = [
     "UnzippingThoughts",
     "Page 1",
-    "Page 2",
+    "Aprendizado técnico",
     "Page 3",
     "Page 4",
     "Sobre o Site"

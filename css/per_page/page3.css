@@ -6,8 +6,8 @@
     z-index: 10;
     position: relative;
 
-    padding: 5vw 0 5vw 0;
-    margin: 10vw 0;
+    padding: 3vw 0 5vw 0;
+    margin: 0;
     flex-direction: column;
 
     gap: 7vw;
@@ -22,30 +22,66 @@
 }
 
 #title {
+    position: relative;
     color: var(--white);
-    left: 1vw;
+    left: -5vw;
+
+    text-shadow: 3px 3px 1px var(--black);
+}
+
+#title::after{
+    z-index: -1;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    left: -5.2vw;
+
+    top: 0vw;
+    width: 24.7vw;
+    height: 7vw;
+    background: var(--green2);
 }
 
 #sec2 {
     position: relative;
     background-color: var(--white);
-    padding: 5vw 10vw 5vw 10vw;
+    padding: 5vw 10vw 2vw 10vw;
+    margin: 0 50px 10vw 0;
 
     display: flex;
     justify-content: flex-start;
+
+    box-sizing: border-box;
+    border: 4px solid var(--green1);
+    border-left: none;
 }
 
 .form .data{
     display: block;
-    margin: 0.5vw 0;
+    margin: 0.8vw 0;
+    
     height: 3vw;
-    width: 38vw;
-    font-size: 1.2vw;
+    width: 38.8vw;
+
+    box-sizing: border-box;
+    border: 1px solid rgb(148, 148, 148);
+
 }
 
 .form #text_area{
     width: 38.2vw;
     height: 15vw;
+
+    min-width: 38.3vw;
+    max-width: 38.3vw;
+
+    min-height: 10vw;
+    max-height: 10vw;
+    
+}
+
+#text_area, .data{
+    box-shadow: 2px 2px 3px var(--black);
     font-size: 1.2vw;
 }
 
@@ -59,20 +95,50 @@
     width: 10vw;
     height: 3.5vw;
 }
+/* 
+#info ::after, #info ::before{
+    content: "";
+    position: absolute;
+}
+
+#info ::before{
+    width: 35%;
+    height: 35%;
+    left: -1vw;
+    top: -1vw;
+
+    border-top: 0.2vw solid var(--green1);
+    border-left: 0.2vw solid var(--green1);
+    
+}  
+#info::after{
+    width: 40%;
+    height: 38%;
+
+    bottom: 0;
+    right: 1vw;
+    border-right: 0.2vw solid var(--green1);
+    border-bottom: 0.2vw solid var(--green1);
+} */
 
 .informations{
     width: 30%;
     position: absolute;
-    right: 8vw;
-    font-size: 1.5vw;
+    right: 5vw;
+    font-size: 1.3vw;
+    padding: 1vw;
+    
+    /* box-sizing: border-box;
+    border: 3px solid var(--green1);
+    border-radius: 0.3vw;     */
 }
 
 .informations p{
-     line-height: 1.8vw;
+     line-height: 1.3em;
 }
 
-#sec2 .informations span{
-    font-size: 1.7vw;
+.informations span{
+    font-size: 1.5vw;
 }
 
 
