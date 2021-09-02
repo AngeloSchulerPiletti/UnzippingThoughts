@@ -48,11 +48,13 @@
       bottom: 8vw;
       left: 10vw;
       display: flex;
+      text-transform: capitalize;
+    
     }
  h2{
    position: relative;
  }
- h2::before{
+.title2::before{
   content: "";
   position: absolute;
   width: 22vw;
@@ -60,4 +62,18 @@
   background-color: var(--green1);
   right: 1vw;
   top: -1.5vw;
+ }
+ .title3::after{
+  content: "";
+  position: absolute;
+  width: 22vw;
+  height: 1vw;
+  bottom: 6vw;
+  border-right: 2vw solid var(--green1);
+  background-color: var(--green1);
+  right: 2vw;
+  top: -1.5vw;
+ }
+ img, p {
+   display: inline-block;
  }
