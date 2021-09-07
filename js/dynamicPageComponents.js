@@ -1,23 +1,36 @@
-/* ============= IMPORTING SCROLLING ============ */
-import {scrollToSec} from "/js/script/scrolling.js";
-/* ============= IMPORTING SCROLLING ============ */
+/* ============= IMPORTING MODULES ============ */
+import {scrollToSec} from "/js/modules/scrolling.js";
+import {setScript} from "/js/modules/settingFuncs.js";
+import {setStyle} from "/js/modules/settingFuncs.js";
+import {setElement} from "/js/modules/settingFuncs.js";
+
+
+/* ----------------- DEV MODE ----------------- */
+function callDevModule() {
+    try {
+        return import("/js/script/devMode.js");
+    }
+    catch (error) { console.log(error); }
+}
+/* ----------------- DEV MODE ----------------- */
+/* ============= IMPORTING MODULES ============ */
 
 
 
 /* ======================= FATORING FUNCTIONS =================== */
 /* -------------------- link set onimgs ----------------*/
-function setLinksOnImgs(param, remove = false) {
-    let carousel_imgs = document.querySelectorAll('.img_container');
-    carousel_imgs.forEach(img => {
-        if (img.classList.contains('center')) {
-            img.addEventListener('click', loadPageX);
-            img.param = param;
-        }
-        else if (remove) {
-            img.removeEventListener('click', loadPageX);
-        }
-    });
-}
+// function setLinksOnImgs(param, remove = false) {
+//     let carousel_imgs = document.querySelectorAll('.img_container');
+//     carousel_imgs.forEach(img => {
+//         if (img.classList.contains('center')) {
+//             img.addEventListener('click', loadPageX);
+//             img.param = param;
+//         }
+//         else if (remove) {
+//             img.removeEventListener('click', loadPageX);
+//         }
+//     });
+// }
 /* -------------------- link set onimgs ----------------*/
 /* ----------------- link set on elements --------------*/
 function settingEventListener(element, index) {
@@ -44,28 +57,28 @@ function setLinksOnHeader(titles) {
 /* ----------------------- HEADER link loads --------------------- */
 /* ----------------------- INICIO link loads --------------------- */
 function setLinkOnInicio() {
-    var carousel_btns = document.querySelectorAll('.arrow');
+    // var carousel_btns = document.querySelectorAll('.arrow');
 
-    setLinksOnImgs(1);
+    // setLinksOnImgs(1);
 
-    carousel_btns.forEach(btn => {
-        btn.addEventListener('click', function () {
-            setTimeout(() => {
-                setLinksOnImgs(1, true);
-            }, 100);
-        });
-    });
+    // carousel_btns.forEach(btn => {
+    //     btn.addEventListener('click', function () {
+    //         setTimeout(() => {
+    //             setLinksOnImgs(1, true);
+    //         }, 100);
+    //     });
+    // });
 
-    var tec_btn = document.querySelector('#tecnical_btn'),
-        com_btn = document.querySelector('#comportamental_btn'),
-        sobresite_btn = document.querySelector('#sobresite_btn'),
-        contactus_btn = document.querySelector('.contact_us');
+    // var tec_btn = document.querySelector('#tecnical_btn'),
+    //     com_btn = document.querySelector('#comportamental_btn'),
+    //     sobresite_btn = document.querySelector('#sobresite_btn'),
+    var contactus_btn = document.querySelector('.contact_us');
 
 
-    settingEventListener(tec_btn, 2);
-    settingEventListener(com_btn, 4);
-    settingEventListener(sobresite_btn, 5);
-    settingEventListener(contactus_btn, 3);
+    // settingEventListener(tec_btn, 2);
+    // settingEventListener(com_btn, 4);
+    // settingEventListener(sobresite_btn, 5);
+    settingEventListener(contactus_btn, 1);
 }
 /* ----------------------- INICIO link loads --------------------- */
 /* =========================== LINK LOADS ======================== */
@@ -107,7 +120,6 @@ async function loadPageX(page_index) {
         settingPageXMetaElements(index);
         settingPageXTitle(index);
         showingTargetPage();
-
 
         switch (index) {
             case 0:
@@ -151,7 +163,7 @@ function settingPageXMetaElements(page_index) {
 /* ======================= TITLE PAGE CONFG ==================== */
 var titles = [
     "UnzippingThoughts",
-    "Page 1",
+    "Contato",
     "Aprendizado técnico",
     "Page 3",
     "Page 4",
@@ -174,52 +186,6 @@ function showingTargetPage() {
 /* ========================= PAGE FADE IN ====================== */
 
 
-
-
-/* ===================== USEFUL SETTING FUNCS ================== */
-function setScript(placeToInsert, src, type = "application/javascript") {
-    var script_js = document.createElement('script');
-    script_js.setAttribute('src', '/js/' + src);
-    script_js.setAttribute('type', type);
-    placeToInsert.appendChild(script_js);
-}
-function setStyle(placeToInsert, src, rel = "stylesheet") {
-    var style_css = document.createElement('link');
-    style_css.setAttribute('href', '/css/' + src);
-    style_css.setAttribute('rel', rel);
-    placeToInsert.appendChild(style_css);
-}
-function setElement(placeToInsert, tag, inner = "", attributes = { "": "" }, eventListener = false) {
-    var element = document.createElement(tag);
-    element.innerHTML = inner;
-    eventListener ? element.addEventListener('click', function(){
-        scrollToSec(attributes['data-scroll']);
-    }) : null;
-    
-
-    let attributes_keys = Object.keys(attributes),
-        attributes_values = Object.values(attributes);
-    let attributes_length = attributes_keys.length;
-    for (let i = 0; i < attributes_length; i++) {
-        element.setAttribute(attributes_keys[i], attributes_values[i]);
-    }
-
-    placeToInsert.appendChild(element);
-}
-/* ===================== USEFUL SETTING FUNCS ================== */
-
-
-
-/* ============= DEV MODE FUNCTION ============ */
-function callDevModule() {
-    try {
-        return import("/js/script/devMode.js");
-    }
-    catch (error) { console.log(error); }
-}
-/* ============= DEV MODE FUNCTION ============ */
-
-
 /*+-------------------------------------------+
   |                 FIRST LOAD                |
   +-------------------------------------------+ */
@@ -228,15 +194,4 @@ window.addEventListener('DOMContentLoaded', function () {
         loadPageX(isNaN(rtrn.PAGE) ? 0 : rtrn.PAGE);
     });
 })
-
-
-/*+-------------------------------------------+
-  |             CREATE THE LINKS              |
-  +-------------------------------------------+ */
-// var links = document.querySelectorAll('.nav_link');
-// for (let index = 0; index < links.length; index++) {
-//     links[index].addEventListener('click', function () {
-//         loadPageX(index);
-//     });
-// }
 
