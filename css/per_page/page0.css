@@ -118,8 +118,8 @@
 
 
 
-/*================= SEC5 ================*/
-#sec5{
+/*================= SEC6 ================*/
+#sec6{
   position: relative;
 
   padding: 5vw 2vw 5vw 10vw;
@@ -129,7 +129,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 5vw;
 }
-#sec5::after{
+#sec6::after{
   content: "";
   position: absolute;
   width: 26vw;
@@ -172,7 +172,7 @@
 #sobresite_btn:hover .anim_topbottom{
   animation-play-state: paused;
 }
-/*================= SEC5 ================*/
+/*================= SEC6 ================*/
 
 /* ================ SEC3 ================*/
 #sec3{
@@ -232,8 +232,8 @@ li p{
 
 /* ================ SEC3 ================*/
 
-/* ================ SEC6 ================*/
-#sec6{
+/* ================ SEC5 ================*/
+#sec5{
   padding: 0 0 0 5vw;
   align-items: flex-end;
   gap: 6vw;
@@ -262,14 +262,14 @@ li p{
   bottom: 0;
   border-left: 0.2vw solid var(--green1);
 }
-#sec6 #img1{
+#sec5 #img1{
   width: 36vw;
 }
-#sec6 h1{
+#sec5 h1{
   text-align: left;
   /* margin-bottom: 8vw; PARA ANIMAÇÕES FUTURAS */
 }
-#sec6 h1 span{
+#sec5 h1 span{
   display: block;
   font-size: 1.2em;
 }
@@ -298,3 +298,28 @@ li p{
   border-radius: 8px;
 }
 /* ================ SEC7 ================*/
+
+/* ================ SEC8 ================*/
+
+#sec8 {
+  gap: 2vw;
+}
+
+#sec8 h1 {
+  margin-left: 2vw;
+  color: var(--white);
+}
+
+#partners-images {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+}
+
+.partners_logo {
+  width: 15vw;
+  height: 15vw;
+  object-fit: scale-down; 
+}
+
+/* ================ SEC8 ================*/

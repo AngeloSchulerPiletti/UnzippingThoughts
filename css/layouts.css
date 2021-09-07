@@ -5,3 +5,21 @@
 .flex_r {
   display: flex;
 }
+
+
+
+
+
+
+
+/*+==========================+
+  |     ELEMENTS ALIGN       |
+  +==========================+ */
+  .self-left{
+    align-self: flex-start;
+    margin-left: 10vw !important;
+  }
+  .self-right{
+    align-self: flex-end;
+    margin-right: 10vw !important;
+  }

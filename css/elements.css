@@ -307,6 +307,9 @@
     border-top-right-radius: 2vw;
     border-bottom-left-radius: 2vw;
   }
+  .bk-black{
+    background-color: var(--black);
+  }
 /*+------------------------------+
   |        ELEMENTS STYLE        |
   +------------------------------+*/
