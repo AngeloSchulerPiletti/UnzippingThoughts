@@ -128,9 +128,8 @@
     font-size: 1.3vw;
     padding: 1vw;
     
-    /* box-sizing: border-box;
-    border: 3px solid var(--green1);
-    border-radius: 0.3vw;     */
+    box-sizing: border-box;
+    border-left: 3px solid var(--green1);  
 }
 
 .informations p{
