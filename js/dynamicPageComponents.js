@@ -124,7 +124,7 @@ async function loadPageX(page_index) {
         switch (index) {
             case 0:
                 setLinkOnInicio();
-                setLinksOnHeader(["sec1", "sec2", "sec3", "sec4", "sec5", "sec6"]);
+                setLinksOnHeader(["Apresentação", "Formação", "processo", "membros", "case", "web", "Feedback", "Parceiros"]);
                 break;
 
             default:
@@ -142,7 +142,7 @@ function settingPageXMetaElements(page_index) {
     var pageMetaPlace = document.querySelector('.page_meta');
 
     setStyle(pageMetaPlace, 'per_page/page' + page_index + '.css');
-    setScript(pageMetaPlace, 'per_page/page' + page_index + '.js', 'module');
+    // setScript(pageMetaPlace, 'per_page/page' + page_index + '.js', 'module');
 
     switch (page_index) {
         case 0:

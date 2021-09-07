@@ -75,13 +75,13 @@ header .left #header_logo{
 header .center nav{
     display: flex;
     justify-content: center;
-    gap: 1vw;
 }
 .nav_link{
     cursor: pointer;
     text-transform: uppercase;
     color: var(--white);
     font-size: 1.1vw;
+    padding: 0;
 
     transition: color 200ms ease-in-out;
 }
