@@ -93,8 +93,8 @@
 
 
 
-/*================= SEC3 ================*/
-#sec3{
+/*================= SEC4 ================*/
+#sec4{
   background-color: var(--white);
   padding: 5vw 10vw 2vw 10vw;
 
@@ -113,13 +113,13 @@
   text-align: center;
   font-size: 1.6vw;
 }
-/*================= SEC3 ================*/
-
-
-
-
 /*================= SEC4 ================*/
-#sec4{
+
+
+
+
+/*================= SEC5 ================*/
+#sec5{
   position: relative;
 
   padding: 5vw 2vw 5vw 10vw;
@@ -129,7 +129,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 5vw;
 }
-#sec4::after{
+#sec5::after{
   content: "";
   position: absolute;
   width: 26vw;
@@ -172,10 +172,10 @@
 #sobresite_btn:hover .anim_topbottom{
   animation-play-state: paused;
 }
-/*================= SEC4 ================*/
+/*================= SEC5 ================*/
 
-/* ================ SEC5 ================*/
-#sec5{
+/* ================ SEC3 ================*/
+#sec3{
   position: relative;
 
   background-color: var(--white);
@@ -230,4 +230,42 @@ li p{
   background-repeat: no-repeat;
 }
 
-/* ================ SEC5 ================*/
+/* ================ SEC3 ================*/
+
+/* ================ SEC6 ================*/
+#sec6{
+  padding: 0 0 0 5vw;
+  align-items: flex-end;
+}
+#img1_container{
+  position: relative;
+}
+#img1_container::before, #img1_container::after{
+  content: "";
+  position: absolute;
+}
+#img1_container::before{
+  width: 20%;
+  height: 10%;
+
+  top: -1vw;
+  right: -1vw;
+
+  border-top-right-radius: 2vw;
+  border-top: 0.2vw solid var(--green1);
+  border-right: 0.2vw solid var(--green1);
+}
+#img1_container::after{
+  height: 20%;
+  right: -1vw;
+  bottom: 0;
+  border-left: 0.2vw solid var(--green1);
+}
+#sec6 #img1{
+  width: 36vw;
+}
+#sec6 h1{
+  text-align: center;
+  /* margin-bottom: 8vw; PARA ANIMAÇÕES FUTURAS */
+}
+/* ================ SEC6 ================*/
