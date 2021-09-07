@@ -1,6 +1,8 @@
 @keyframes headerDown {
     0%{
         transform: translate(0, -100%);
+        grid-template-columns: 1fr;
+        padding: 1vw;
     }
     1%{
         position: fixed;
@@ -16,6 +18,8 @@
         left: 0;
         right: 0;
         background-color: #0D0D0DEF;
+        grid-template-columns: 1fr;
+        padding: 1vw;
     }
 }
 
