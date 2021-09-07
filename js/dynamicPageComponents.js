@@ -142,7 +142,6 @@ function settingPageXMetaElements(page_index) {
     var pageMetaPlace = document.querySelector('.page_meta');
 
     setStyle(pageMetaPlace, 'per_page/page' + page_index + '.css');
-    // setScript(pageMetaPlace, 'per_page/page' + page_index + '.js', 'module');
 
     switch (page_index) {
         case 0:
@@ -164,10 +163,6 @@ function settingPageXMetaElements(page_index) {
 var titles = [
     "UnzippingThoughts",
     "Contato",
-    "Aprendizado técnico",
-    "Page 3",
-    "Page 4",
-    "Sobre o Site"
 ];
 function settingPageXTitle(page_index) {
     document.querySelector('title').innerHTML = titles[page_index];
