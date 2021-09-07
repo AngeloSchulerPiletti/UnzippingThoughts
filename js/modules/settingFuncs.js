@@ -1,3 +1,5 @@
+import {scrollToSec} from "/js/modules/scrolling.js";
+
 export function setScript(placeToInsert, src, type = "application/javascript") {
     var script_js = document.createElement('script');
     script_js.setAttribute('src', '/js/' + src);
