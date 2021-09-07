@@ -24,6 +24,17 @@ function settingEventListener(element, index) {
 
 
 /* =========================== LINK LOADS ======================== */
+/* ----------------------- HEADER link loads --------------------- */
+function setLinksOnHeader(titles) {
+    var page_secs = document.querySelectorAll('.sec'),
+        placeToInsert = document.querySelector('#header_nav'),
+        sections_title = titles;
+
+    for (let i = 0; i < page_secs.length; i++) {
+        setElement(placeToInsert, 'button', sections_title[i], { "disabled": "disabled", "data-scroll": "sec" + i, "class": "nav_link"});
+    }
+}
+/* ----------------------- HEADER link loads --------------------- */
 /* ----------------------- INICIO link loads --------------------- */
 function setLinkOnInicio() {
     var carousel_btns = document.querySelectorAll('.arrow');
@@ -93,11 +104,13 @@ async function loadPageX(page_index) {
         switch (index) {
             case 0:
                 setLinkOnInicio();
+                setLinksOnHeader(["sec1", "sec2", "sec3", "sec4", "sec5", "sec6"]);
                 break;
 
             default:
                 break;
         }
+
     });
 }
 /* ======================= REQUEST PROMISE ==================== */
@@ -168,6 +181,19 @@ function setStyle(placeToInsert, src, rel = "stylesheet") {
     style_css.setAttribute('rel', rel);
     placeToInsert.appendChild(style_css);
 }
+function setElement(placeToInsert, tag, inner = "", attributes = { "": "" }) {
+    var element = document.createElement(tag);
+    element.innerHTML = inner;
+
+    let attributes_keys = Object.keys(attributes),
+        attributes_values = Object.values(attributes);
+    let attributes_length = attributes_keys.length;
+    for (let i = 0; i < attributes_length; i++) {
+        element.setAttribute(attributes_keys[i], attributes_values[i]);
+    }
+
+    placeToInsert.appendChild(element);
+}
 /* ===================== USEFUL SETTING FUNCS ================== */
 
 
@@ -180,7 +206,7 @@ function callDevModule() {
     try {
         return import("/js/script/devMode.js");
     }
-    catch (error) {console.log(error);}
+    catch (error) { console.log(error); }
 }
 /* ============= DEV MODE FUNCTION ============ */
 
@@ -198,9 +224,10 @@ window.addEventListener('DOMContentLoaded', function () {
 /*+-------------------------------------------+
   |             CREATE THE LINKS              |
   +-------------------------------------------+ */
-var links = document.querySelectorAll('.nav_link');
-for (let index = 0; index < links.length; index++) {
-    links[index].addEventListener('click', function () {
-        loadPageX(index);
-    });
-}
+// var links = document.querySelectorAll('.nav_link');
+// for (let index = 0; index < links.length; index++) {
+//     links[index].addEventListener('click', function () {
+//         loadPageX(index);
+//     });
+// }
+
