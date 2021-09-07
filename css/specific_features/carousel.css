@@ -106,7 +106,7 @@
     cursor: pointer;
 }
 .img_container.center#img_c0:hover::before{ /*ANGELO*/
-    content: "Conhecido por seus grandes feitos durante o Bug do Milênio";
+    content: "Artesão da web utilizando Laravel (PHP) e JS (VueJS)";
 }
 .img_container.center#img_c1:hover::before{ /*GUILHERME*/
     content: "É isso daí não leu o pau comeu";
