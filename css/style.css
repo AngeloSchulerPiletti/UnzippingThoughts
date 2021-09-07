@@ -71,6 +71,7 @@ header{
 }
 header .left #header_logo{
     height: 100%;
+    cursor: pointer;
 }
 header .center nav{
     display: flex;

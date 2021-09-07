@@ -1,8 +1,8 @@
 /* ============= IMPORTING MODULES ============ */
 // import {scrollToSec} from "/js/modules/scrolling.js";
-import {setScript} from "/js/modules/settingFuncs.js";
-import {setStyle} from "/js/modules/settingFuncs.js";
-import {setElement} from "/js/modules/settingFuncs.js";
+import { setScript } from "/js/modules/settingFuncs.js";
+import { setStyle } from "/js/modules/settingFuncs.js";
+import { setElement } from "/js/modules/settingFuncs.js";
 
 
 /* ----------------- DEV MODE ----------------- */
@@ -33,10 +33,12 @@ function callDevModule() {
 // }
 /* -------------------- link set onimgs ----------------*/
 /* ----------------- link set on elements --------------*/
-function settingEventListener(element, index) {
-    element.addEventListener('click', function () {
-        loadPageX(index);
-    })
+function settingEventListener(elements, index) {
+    elements.forEach(element => {
+        element.addEventListener('click', function () {
+            loadPageX(index);
+        })
+    });
 }
 /* ----------------- link set on elements --------------*/
 /* ======================= FATORING FUNCTIONS =================== */
@@ -50,9 +52,13 @@ function setLinksOnHeader(titles) {
         sections_title = titles;
 
     for (let i = 0; i < page_secs.length; i++) {
-        setElement(placeToInsert, 'button', sections_title[i], {"data-scroll": "sec" + (i+1), "class": "nav_link" }, true);
+        setElement(placeToInsert, 'button', sections_title[i], { "data-scroll": "sec" + (i + 1), "class": "nav_link" }, true);
     }
 
+}
+function cleanHeaderLinks(){
+    var header = document.querySelector('#header_nav');
+    header.innerHTML = "";
 }
 /* ----------------------- HEADER link loads --------------------- */
 /* ----------------------- INICIO link loads --------------------- */
@@ -72,7 +78,7 @@ function setLinkOnInicio() {
     // var tec_btn = document.querySelector('#tecnical_btn'),
     //     com_btn = document.querySelector('#comportamental_btn'),
     //     sobresite_btn = document.querySelector('#sobresite_btn'),
-    var contactus_btn = document.querySelector('.contact_us');
+    var contactus_btn = document.querySelectorAll('.contact_us');
 
 
     // settingEventListener(tec_btn, 2);
@@ -117,9 +123,13 @@ async function loadPageX(page_index) {
 
     makeRequest(index).then(value => {
         document.querySelector('main').innerHTML = value;
+        cleanHeaderLinks();
         settingPageXMetaElements(index);
         settingPageXTitle(index);
         showingTargetPage();
+
+        var logo = document.querySelector('#header_logo');
+        settingEventListener([logo], 0);
 
         switch (index) {
             case 0:
