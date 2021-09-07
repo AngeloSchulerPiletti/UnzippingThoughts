@@ -134,7 +134,7 @@ async function loadPageX(page_index) {
         switch (index) {
             case 0:
                 setLinkOnInicio();
-                setLinksOnHeader(["Apresentação", "Formação", "processo", "membros", "case", "web", "Feedback", "Parceiros"]);
+                setLinksOnHeader(["Apresentação", "Formação", "processo", "membros", "web", "case", "Feedback", "Parceiros"]);
                 break;
 
             default:
