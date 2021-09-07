@@ -12,7 +12,8 @@ function currentYPosition() {
 
 function elmYPosition(sec_id) {
     var elm = document.getElementById(sec_id);
-    var y = elm.offsetTop;
+    var margin = screen.height/10;
+    var y = elm.offsetTop - margin;
     var node = elm;
     while (node.offsetParent && node.offsetParent != document.body) {
         node = node.offsetParent;
