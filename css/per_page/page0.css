@@ -236,6 +236,7 @@ li p{
 #sec6{
   padding: 0 0 0 5vw;
   align-items: flex-end;
+  gap: 6vw;
 }
 #img1_container{
   position: relative;
@@ -265,7 +266,11 @@ li p{
   width: 36vw;
 }
 #sec6 h1{
-  text-align: center;
+  text-align: left;
   /* margin-bottom: 8vw; PARA ANIMAÇÕES FUTURAS */
+}
+#sec6 h1 span{
+  display: block;
+  font-size: 1.2em;
 }
 /* ================ SEC6 ================*/
