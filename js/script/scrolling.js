@@ -29,7 +29,7 @@ export function scrollToSec(sec_id) {
         if (distance < 100) {
             scrollTo(0, stopY); return;
         }
-        var speed = Math.round(distance / 100);
+        var speed = Math.round(distance / 80);
         if (speed >= 20) speed = 20;
         var step = Math.round(distance / 25);
         var leapY = stopY > startY ? startY + step : startY - step;
