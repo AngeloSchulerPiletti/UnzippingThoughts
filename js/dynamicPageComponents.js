@@ -1,5 +1,5 @@
 /* ============= IMPORTING MODULES ============ */
-import {scrollToSec} from "/js/modules/scrolling.js";
+// import {scrollToSec} from "/js/modules/scrolling.js";
 import {setScript} from "/js/modules/settingFuncs.js";
 import {setStyle} from "/js/modules/settingFuncs.js";
 import {setElement} from "/js/modules/settingFuncs.js";
