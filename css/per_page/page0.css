@@ -277,14 +277,24 @@ li p{
 
 /* ================ SEC8 ================*/
 
+#sec8 {
+  gap: 2vw;
+}
+
+#sec8 h1 {
+  margin-left: 2vw;
+}
+
 #partners-images {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
 }
 
 .partners_logo {
-  block-size: 15vw;
-  padding: 15px;
-  margin-right: 5vw;
+  width: 15vw;
+  height: 15vw;
+  object-fit: scale-down; 
 }
 
 /* ================ SEC8 ================*/
