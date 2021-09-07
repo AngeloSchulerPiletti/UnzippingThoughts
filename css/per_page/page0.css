@@ -274,3 +274,17 @@ li p{
   font-size: 1.2em;
 }
 /* ================ SEC6 ================*/
+
+/* ================ SEC8 ================*/
+
+#partners-images {
+  display: inline-flex;
+}
+
+.partners_logo {
+  block-size: 15vw;
+  padding: 15px;
+  margin-right: 5vw;
+}
+
+/* ================ SEC8 ================*/
