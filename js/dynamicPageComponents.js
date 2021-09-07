@@ -1,3 +1,9 @@
+/* ============= IMPORTING SCROLLING ============ */
+import {scrollToSec} from "/js/script/scrolling.js";
+/* ============= IMPORTING SCROLLING ============ */
+
+
+
 /* ======================= FATORING FUNCTIONS =================== */
 /* -------------------- link set onimgs ----------------*/
 function setLinksOnImgs(param, remove = false) {
@@ -31,8 +37,9 @@ function setLinksOnHeader(titles) {
         sections_title = titles;
 
     for (let i = 0; i < page_secs.length; i++) {
-        setElement(placeToInsert, 'button', sections_title[i], { "disabled": "disabled", "data-scroll": "sec" + i, "class": "nav_link"});
+        setElement(placeToInsert, 'button', sections_title[i], {"data-scroll": "sec" + (i+1), "class": "nav_link" }, true);
     }
+
 }
 /* ----------------------- HEADER link loads --------------------- */
 /* ----------------------- INICIO link loads --------------------- */
@@ -100,6 +107,7 @@ async function loadPageX(page_index) {
         settingPageXMetaElements(index);
         settingPageXTitle(index);
         showingTargetPage();
+
 
         switch (index) {
             case 0:
@@ -181,9 +189,13 @@ function setStyle(placeToInsert, src, rel = "stylesheet") {
     style_css.setAttribute('rel', rel);
     placeToInsert.appendChild(style_css);
 }
-function setElement(placeToInsert, tag, inner = "", attributes = { "": "" }) {
+function setElement(placeToInsert, tag, inner = "", attributes = { "": "" }, eventListener = false) {
     var element = document.createElement(tag);
     element.innerHTML = inner;
+    eventListener ? element.addEventListener('click', function(){
+        scrollToSec(attributes['data-scroll']);
+    }) : null;
+    
 
     let attributes_keys = Object.keys(attributes),
         attributes_values = Object.values(attributes);
@@ -195,9 +207,6 @@ function setElement(placeToInsert, tag, inner = "", attributes = { "": "" }) {
     placeToInsert.appendChild(element);
 }
 /* ===================== USEFUL SETTING FUNCS ================== */
-
-
-
 
 
 
