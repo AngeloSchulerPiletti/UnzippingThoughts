@@ -68,6 +68,26 @@ header{
     align-items: center;
 
     color: var(--white);
+    transition: transform 400ms;
+}
+header.header-static{
+    position: static;
+}
+header.header-fixed{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+    background-color: #0D0D0DE0;
+}
+header[data-move]{
+}
+header[data-move="on"]{
+    transform: translateY(0);
+}
+header[data-move="off"]{
+    transform: translateY(0);
 }
 header .left #header_logo{
     height: 100%;

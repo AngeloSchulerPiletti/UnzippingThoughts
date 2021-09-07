@@ -291,7 +291,7 @@ li p{
   margin: 0 50px 10vw 0;
   display: flex;
   justify-content: flex-start;
-  font-size: 22px;
+  /* font-size: 1.2vw; */
 }
 #cliente{
   width: 50%;
