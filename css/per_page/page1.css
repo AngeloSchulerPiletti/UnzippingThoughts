@@ -67,17 +67,12 @@
   right: 1vw;
   top: -1.5vw;
  }
- img, p {
-   display: inline-block;
- }
- .humanname1{
-  position: absolute;
-  bottom: 6vw;
-  left: 10vw;
-  display: flex;
-  text-transform: capitalize;
+.humanname{
+  color: red;
+  position: absolute; 
+  bottom: 0px;
 }
-#myhistory-title::before{
+section::before{
   content:"";
   position: absolute;
   width: 33vw;
@@ -86,21 +81,13 @@
   right: 30vw;
   top: 27vw;
 }
-.title1::after{
+
+#paragraphOne::after{
   content:"";
   position: absolute;
-  width: 24vw;
-  height: 4px;
+  width: 45vw;
+  height: 3vw;
   background-color: var(--green1);
   right: 30vw;
-  top: 17vw;
-}
-.title2::after{
-  content:"";
-  position: absolute;
-  width: 22vw;
-  height: 4px;
-  background-color: var(--green1);
-  right: 30vw;
-  top: 13vw;
+  top: 30vw;
 }
