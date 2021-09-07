@@ -12,6 +12,16 @@
 }
 
 
+/* ================ action_container ================*/
+.action_container{
+  align-items: center;
+  justify-content: center;
+  margin: 2vw 0 5vw 0;
+}
+/* ================ action_container ================*/
+
+
+
 /*================= SEC1 ================*/
 #sec1{
   justify-content: center;
@@ -164,17 +174,8 @@
 }
 /*================= SEC4 ================*/
 
-
 /* ================ SEC5 ================*/
 #sec5{
-  align-items: center;
-  justify-content: center;
-  margin: 2vw 0 5vw 0;
-}
-/* ================ SEC5 ================*/
-
-/* ================ SEC6 ================*/
-#sec6{
   position: relative;
 
   background-color: var(--white);
@@ -229,4 +230,4 @@ li p{
   background-repeat: no-repeat;
 }
 
-/* ================ SEC6 ================*/
+/* ================ SEC5 ================*/
