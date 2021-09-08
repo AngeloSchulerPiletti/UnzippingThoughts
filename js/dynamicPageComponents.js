@@ -138,20 +138,6 @@ function startParticles() {
   window.particlesJS('particles-js', params);
 }
 /* ------------------ starting particles ------------------------ */
-/* -------------------- link set onimgs ----------------*/
-// function setLinksOnImgs(param, remove = false) {
-//     let carousel_imgs = document.querySelectorAll('.img_container');
-//     carousel_imgs.forEach(img => {
-//         if (img.classList.contains('center')) {
-//             img.addEventListener('click', loadPageX);
-//             img.param = param;
-//         }
-//         else if (remove) {
-//             img.removeEventListener('click', loadPageX);
-//         }
-//     });
-// }
-/* -------------------- link set onimgs ----------------*/
 /* ----------------- link set on elements --------------*/
 function settingEventListener(elements, index) {
     elements.forEach(element => {

@@ -127,14 +127,22 @@ function rollCarousel(action) { //Number: 1-> back 2-> next
 
 
 var name_space = document.querySelector('#name_field'),
-    names = ["Angelo Schuler Piletti", "Guilherme Pacheco", "Rayssa Rodrigues", "Vinícius Adamski Heller", "Thiago Quevedo dos Santos"],
+    link_space = document.querySelector('#link_field'),
+    people = [
+        ["Angelo Schuler Piletti", "https://www.linkedin.com/in/angelo-schuler-piletti/"],
+        ["Guilherme Pacheco", "https://www.linkedin.com/in/gpachecofreitas/"],
+        ["Rayssa Rodrigues", "https://www.linkedin.com/in/rayssa-rodrigues-da-silva/"],
+        ["Vinícius Adamski Heller", "https://www.linkedin.com/in/vin%C3%ADcius-heller-52197a212/"],
+        ["Thiago Quevedo dos Santos", "https://www.linkedin.com/in/thiagoquevedosantos/"]
+    ],
     imgs = document.querySelectorAll('.img_container');
 
 function setNameOnField() {
     imgs.forEach(img => {
         if (img.classList.contains('center')) {
             var indexOfImgOnCenter = img.id.match(/[0-9]{1}/)[0];
-            name_space.innerHTML = names[indexOfImgOnCenter];
+            name_space.innerHTML = people[indexOfImgOnCenter][0];
+            link_space.setAttribute('href', people[indexOfImgOnCenter][1]);
         }
     });
 }

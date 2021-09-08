@@ -128,9 +128,35 @@
   }
 #colaborator_name{
   margin: auto auto 3vw auto;
-  width: 50%;
+  width: fit-content;
   text-align: center;
-  font-size: 1.6vw;
+  font-size: 1.9vw;
+  position: relative;
+}
+#colaborator_name::before, #colaborator_name::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  border: 1px solid var(--green1);
+  opacity: 0;
+
+  transition: left 200ms, right 200ms;
+}
+#colaborator_name::before{
+  top: -0.8vw;
+}
+#colaborator_name::after{
+  bottom: -0.8vw;
+}
+#colaborator_name:hover::before, #colaborator_name:hover::after{
+  opacity: 1;
+  left: -1.5vw;
+  right: -1.5vw;
+}
+#colaborator_name a{
+  color: var(--black);
+  gap: 1vw;
 }
 /*================= SEC4 ================*/
 
