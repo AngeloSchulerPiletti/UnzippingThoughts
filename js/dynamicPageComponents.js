@@ -136,7 +136,6 @@ function startParticles() {
   var params = JSON.parse(JSON.stringify(particles_json));
   window.particlesJS('particles-js', params);
 }
-
 /* ------------------ starting particles ------------------------ */
 /* -------------------- link set onimgs ----------------*/
 // function setLinksOnImgs(param, remove = false) {
@@ -182,13 +181,16 @@ function settingConfigurations(page_index) {
 
     switch (page_index) {
         case 0:
+          setTimeout(() => {
             startParticles();
+          }, 10);
             startCarousel();
             setLinkOnPage0();
             setLinksOnHeader(["Apresentação", "Formação", "processo", "membros", "web", "case", "Feedback", "Parceiros"]);
             break;
 
         default:
+
             break;
     }
 }
