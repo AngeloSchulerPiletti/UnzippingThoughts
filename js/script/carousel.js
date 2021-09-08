@@ -1,10 +1,8 @@
-var back = document.querySelector('#btn_left'),
-    next = document.querySelector('#btn_right'),
-    display = 1;
+export function startCarousel() {
 
 var imgs_container = document.querySelectorAll('.img_container');
 
-
+console.log('started');
 
 function rollCarousel(action) { //Number: 1-> back 2-> next
     if (action == 1) {
@@ -128,9 +126,6 @@ function rollCarousel(action) { //Number: 1-> back 2-> next
 }
 
 
-
-
-
 var name_space = document.querySelector('#name_field'),
     names = ["Angelo Schuler Piletti", "Guilherme Pacheco", "Rayssa Rodrigues", "Vinícius Adamski Heller", "Thiago Quevedo dos Santos"],
     imgs = document.querySelectorAll('.img_container');
@@ -146,6 +141,9 @@ function setNameOnField() {
 
 
 
+var back = document.querySelector('#btn_left'),
+    next = document.querySelector('#btn_right');
+
 setNameOnField();
 
 back.addEventListener('click', () => {
@@ -158,4 +156,4 @@ next.addEventListener('click', () => {
 })
 
 
-
+}

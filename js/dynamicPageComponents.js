@@ -1,9 +1,6 @@
 /* ============= IMPORTING MODULES ============ */
-// import {scrollToSec} from "/js/modules/scrolling.js";
-import { setScript } from "/js/modules/settingFuncs.js";
-import { setStyle } from "/js/modules/settingFuncs.js";
 import { setElement } from "/js/modules/settingFuncs.js";
-
+import { startCarousel } from "/js/script/carousel.js";
 
 /* ----------------- DEV MODE ----------------- */
 function callDevModule() {
@@ -18,6 +15,129 @@ function callDevModule() {
 
 
 /* ======================= FATORING FUNCTIONS =================== */
+/* ------------------ starting particles ------------------------ */
+function startParticles() {
+    var particles_json = {
+    "particles": {
+      "number": {
+        "value": 70,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 1,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.5,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 0,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.3,
+        "width": 0.8
+      },
+      "move": {
+        "enable": true,
+        "speed": 2,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": false,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true,
+    "config_demo": {
+      "hide_card": false,
+      "background_color": "#b61924",
+      "background_image": "",
+      "background_position": "50% 50%",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
+    }
+  };
+  var params = JSON.parse(JSON.stringify(particles_json));
+  window.particlesJS('particles-js', params);
+}
+
+/* ------------------ starting particles ------------------------ */
 /* -------------------- link set onimgs ----------------*/
 // function setLinksOnImgs(param, remove = false) {
 //     let carousel_imgs = document.querySelectorAll('.img_container');
@@ -41,6 +161,38 @@ function settingEventListener(elements, index) {
     });
 }
 /* ----------------- link set on elements --------------*/
+function stylesheetScoper(page_index){
+    var cssLinks = document.querySelectorAll('.pagesCSS');
+    cssLinks.forEach(element => {
+        if (element.id == "page"+page_index+"_stylesheet") {
+            element.disabled = false;
+        }
+        else {
+            element.disabled = true;
+        }
+    });
+    
+}
+/* -----------------  global pages funcs  --------------*/
+function settingConfigurations(page_index) {
+    cleanElement('header_nav');
+    settingPageXTitle(page_index);
+    showingTargetPage();
+    stylesheetScoper(page_index);
+
+    switch (page_index) {
+        case 0:
+            startParticles();
+            startCarousel();
+            setLinkOnPage0();
+            setLinksOnHeader(["Apresentação", "Formação", "processo", "membros", "web", "case", "Feedback", "Parceiros"]);
+            break;
+
+        default:
+            break;
+    }
+}
+/* -----------------  global pages funcs  --------------*/
 /* ======================= FATORING FUNCTIONS =================== */
 
 
@@ -54,39 +206,18 @@ function setLinksOnHeader(titles) {
     for (let i = 0; i < page_secs.length; i++) {
         setElement(placeToInsert, 'button', sections_title[i], { "data-scroll": "sec" + (i + 1), "class": "nav_link" }, true);
     }
-
 }
-function cleanHeaderLinks(){
-    var header = document.querySelector('#header_nav');
-    header.innerHTML = "";
+function cleanElement(elementID) {
+    var element = document.querySelector('#'+elementID);
+    element.innerHTML = "";
 }
 /* ----------------------- HEADER link loads --------------------- */
-/* ----------------------- INICIO link loads --------------------- */
-function setLinkOnInicio() {
-    // var carousel_btns = document.querySelectorAll('.arrow');
-
-    // setLinksOnImgs(1);
-
-    // carousel_btns.forEach(btn => {
-    //     btn.addEventListener('click', function () {
-    //         setTimeout(() => {
-    //             setLinksOnImgs(1, true);
-    //         }, 100);
-    //     });
-    // });
-
-    // var tec_btn = document.querySelector('#tecnical_btn'),
-    //     com_btn = document.querySelector('#comportamental_btn'),
-    //     sobresite_btn = document.querySelector('#sobresite_btn'),
+/* ----------------------- PAGE0 link loads --------------------- */
+function setLinkOnPage0() {
     var contactus_btn = document.querySelectorAll('.contact_us');
-
-
-    // settingEventListener(tec_btn, 2);
-    // settingEventListener(com_btn, 4);
-    // settingEventListener(sobresite_btn, 5);
     settingEventListener(contactus_btn, 1);
 }
-/* ----------------------- INICIO link loads --------------------- */
+/* ----------------------- PAGE0 link loads --------------------- */
 /* =========================== LINK LOADS ======================== */
 
 
@@ -101,7 +232,6 @@ function makeRequest(page_index) {
         xhr.onload = function () {
             if (this.status >= 200 && this.status < 300) {
                 resolve(xhr.response);
-                // resolve('you got it!')
             } else {
                 reject({
                     status: this.status,
@@ -119,53 +249,19 @@ function makeRequest(page_index) {
     });
 }
 async function loadPageX(page_index) {
-    var index = typeof page_index == 'object' ? page_index.target.param : page_index;
-
-    makeRequest(index).then(value => {
-        document.querySelector('main').innerHTML = value;
-        cleanHeaderLinks();
-        settingPageXMetaElements(index);
-        settingPageXTitle(index);
-        showingTargetPage();
-
-        var logo = document.querySelector('#header_logo');
-        settingEventListener([logo], 0);
-
-        switch (index) {
-            case 0:
-                setLinkOnInicio();
-                setLinksOnHeader(["Apresentação", "Formação", "processo", "membros", "web", "case", "Feedback", "Parceiros"]);
-                break;
-
-            default:
-                break;
-        }
-
-    });
-}
-/* ======================= REQUEST PROMISE ==================== */
-
-
-
-/* ======================= SETTING METADATA =================== */
-function settingPageXMetaElements(page_index) {
-    var pageMetaPlace = document.querySelector('.page_meta');
-
-    setStyle(pageMetaPlace, 'per_page/page' + page_index + '.css');
-
-    switch (page_index) {
-        case 0:
-            setScript(pageMetaPlace, 'script/particles-js/particles.js');
-            setScript(pageMetaPlace, 'script/carousel.js');
-            setStyle(pageMetaPlace, 'specific_features/carousel.css');
-            setStyle(pageMetaPlace, 'specific_features/particlesjs.css');
-            break;
-        default:
-            break;
+    if (!pagesNode[page_index]) {
+        makeRequest(page_index).then(value => {
+            pagesNode[page_index] = value;
+            document.querySelector('main').innerHTML = pagesNode[page_index];
+            settingConfigurations(page_index);
+        });
+    }
+    else{
+        document.querySelector('main').innerHTML = pagesNode[page_index];
+        settingConfigurations(page_index);
     }
 }
-/* ======================= SETTING METADATA =================== */
-
+/* ======================= REQUEST PROMISE ==================== */
 
 
 
@@ -191,12 +287,24 @@ function showingTargetPage() {
 /* ========================= PAGE FADE IN ====================== */
 
 
+
+
+
+
+/*+-------------------------------------------+
+  |                 VARIABLES                 |
+  +-------------------------------------------+ */
+var pagesNode = []; //page0.hmtl, page1.html
+
 /*+-------------------------------------------+
   |                 FIRST LOAD                |
   +-------------------------------------------+ */
-window.addEventListener('DOMContentLoaded', function () {
-    callDevModule().then((rtrn) => {
-        loadPageX(isNaN(rtrn.PAGE) ? 0 : rtrn.PAGE);
-    });
-})
+// --------------- linking logo ---------------
+var logo = document.querySelector('#header_logo');
+settingEventListener([logo], 0);
+
+callDevModule().then((rtrn) => {
+    loadPageX(isNaN(rtrn.PAGE) ? 0 : rtrn.PAGE);
+});
+
 

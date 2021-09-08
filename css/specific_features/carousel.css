@@ -109,13 +109,13 @@
     content: "Artesão da web utilizando Laravel (PHP) e JS (VueJS)";
 }
 .img_container.center#img_c1:hover::before{ /*GUILHERME*/
-    content: "É isso daí não leu o pau comeu";
+    content: "Desenvolvedor front-end focado em lógica";
 }
 .img_container.center#img_c2:hover::before{ /*RAYSSA*/
-    content: "Sem frase";
+    content: "Pesquisadora e especialista audiovisual";
 }
 .img_container.center#img_c3:hover::before{ /*VINICIUS*/
-    content: "Em caminho de paca, tatu caminha dentro";
+    content: "Desenvolvedor JS e web designer";
 }
 .img_container.center#img_c4:hover::before{ /*THIAGO*/
     content: "Desingner de página e programador front-end";
