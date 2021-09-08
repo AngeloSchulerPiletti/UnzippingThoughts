@@ -273,6 +273,9 @@
   border-top: 0.25vw solid var(--green1); */
 
 }
+.upper{
+  text-transform: uppercase;
+}
 /*title long upperline*/
 /*+------------------------------+
   |         TITLE STYLE          |

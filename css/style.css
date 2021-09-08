@@ -221,6 +221,9 @@ footer #footer_content{
     display: flex;
     justify-content: space-around;
 }
+#list_container ul{
+    gap: 0.5vw;
+}
 #copyright{
     margin-top: 5vw;
 }
