@@ -1,1 +1,5 @@
-A diversidade presente na equipe certamente é um diferencial! Com nós, você conta com especialistas de diversas áreas, desde Inteligência Artificial até automação de processos empresariais.
+<p class="text_p">A diversidade presente na equipe certamente é um diferencial! A UnzippingThoughts conta com especialistas de diversas áreas, desde Inteligência Artificial até automação de processos empresariais. </p>
+<p class="text_p">Especificando um pouco mais, nosso aprendizado começou com o desenvolvimento de jogos famosos, como o Pong e Freeway - Atari 2600, além de explorarmos a lógica por tras da programação em uma das linguagens mais utilizadas o javascript.</p>
+<p class="text_p">Também nos aprofundamos no uso de Git e Github para trabalhos em conjunto de forma profissional e sobre HTTP e a segurança web.</p>
+<p class="text_p">Após mudamos de foco, passando a utilizar HTML5 e CSS3, experimentando ainda mais as funcionalidades da programação no dia a dia. </p>
+<p class="text_p">Outra ferramenta que também utilizamos, é o Dev Tools, para inspecionar páginas a vontade, identificar erros e saber como corrigir de forma rápida, ou seja, melhorando nossa eficiência.</p>

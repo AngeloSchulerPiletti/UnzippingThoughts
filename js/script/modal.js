@@ -25,7 +25,7 @@ for (let i = 0; i < keys.length; i++) {
 
 export function showModal(modalCode){
     modalContainer.querySelector('h1').innerHTML = modalData[modalCode][0];
-    modalContainer.querySelector('p').innerHTML = modalData[modalCode][1];
+    modalContainer.querySelector('#p_container').innerHTML = modalData[modalCode][1];
     
     modalContainer.style.display = "block";
     setTimeout(() => {

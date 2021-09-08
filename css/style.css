@@ -148,31 +148,33 @@ header .center nav{
 #modal_container[data-show="on"]{
     opacity: 1;
 }
-#modal_container[data-show] div{
+#modal_container[data-show] #modal_white{
     transition: transform 300ms;
     transform: scale(0.5);
 }
-#modal_container[data-show="off"] div{
+#modal_container[data-show="off"] #modal_white{
     transform: scale(0.5);
 }
-#modal_container[data-show="on"] div{
+#modal_container[data-show="on"] #modal_white{
     transform: scale(1);
 }
-#modal_container div{
+#modal_container #modal_white{
     background-color: var(--white);
     margin: 15vh auto 0vh auto;
     width: 50vw;
-    max-height: 75vh;
+    max-height: 65vh;
 
     gap: 3vw;
     
     padding: 3vw;
     border-radius: 0.6vw;
+
+    overflow-y: auto;
 }
-#modal_container div h1{
+#modal_container #modal_white h1{
     cursor: default;
 }
-#modal_container div p{
+#modal_container #modal_white p{
     cursor: default;
     text-align: justify;
     text-indent: 1.3em;
