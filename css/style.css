@@ -223,9 +223,11 @@ footer #footer_content{
 }
 #list_container ul{
     gap: 0.5vw;
+    font-size: 1.2vw;
 }
 #copyright{
     margin-top: 5vw;
+    font-size: 1.2vw;
 }
 /* -------------- FOOTER --------------*/
 /*
