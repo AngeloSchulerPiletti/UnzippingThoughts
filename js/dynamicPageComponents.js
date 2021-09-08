@@ -1,6 +1,7 @@
 /* ============= IMPORTING MODULES ============ */
 import { setElement } from "/js/modules/settingFuncs.js";
 import { startCarousel } from "/js/script/carousel.js";
+import { showModal } from "/js/script/modal.js";
 
 /* ----------------- DEV MODE ----------------- */
 function callDevModule() {
@@ -216,6 +217,17 @@ function cleanElement(elementID) {
 /* ----------------------- HEADER link loads --------------------- */
 /* ----------------------- PAGE0 link loads --------------------- */
 function setLinkOnPage0() {
+    var tec_btn = document.querySelector('#tecnical_btn'),
+        com_btn = document.querySelector('#comportamental_btn');
+    var modalButtons = [['tec', tec_btn], ['com', com_btn]];
+
+    modalButtons.forEach(btnArr => {
+      btnArr[1].addEventListener('click', function(){
+        showModal(btnArr[0]);
+      });
+    });
+    
+
     var contactus_btn = document.querySelectorAll('.contact_us');
     settingEventListener(contactus_btn, 1);
 }
