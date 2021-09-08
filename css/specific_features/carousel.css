@@ -102,8 +102,6 @@
     text-transform: uppercase;
     font-size: 1.5vw;
     line-height: 1.2em;
-
-    cursor: pointer;
 }
 .img_container.center#img_c0:hover::before{ /*ANGELO*/
     content: "Artesão da web utilizando Laravel (PHP) e JS (VueJS)";
