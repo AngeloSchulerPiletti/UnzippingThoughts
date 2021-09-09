@@ -1,7 +1,7 @@
 # UnzippingThoughts LandingPage
 This LandingPage was made by the greatest squad;
 
-<img src="./assets/LP_giphy.gif"/>
+<img src="./assets/lp_giphy.gif"/>
 
 <br>
 
