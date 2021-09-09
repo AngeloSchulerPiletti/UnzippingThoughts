@@ -1,8 +1,8 @@
-.page_content{
+.page_content {
   position: relative;
 }
 
-#content_container{
+#content_container {
   z-index: 10;
   position: relative;
 
@@ -11,47 +11,51 @@
   gap: 7vw;
 }
 
-
 /* ================ action_container ================*/
-.action_container{
+.action_container {
   align-items: center;
   justify-content: center;
   margin: 2vw 0 5vw 0;
 }
 /* ================ action_container ================*/
 
-
-
 /*================= SEC1 ================*/
-#sec1{
+#sec1 {
   justify-content: center;
   gap: 4vw;
 }
-#paragraph_incial{
+#paragraph_incial {
   padding: 2vw 0 2vw 0;
   width: 30vw;
   color: var(--white);
   font-size: 3.5vw;
   text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   line-height: 1.1em;
-
 }
-#paragraph_incial span{
-    color: var(--green1);
-    font-family: 'Oswald', sans-serif;
-    display: block;
+#paragraph_incial span {
+  color: var(--green1);
+  font-family: "Oswald", sans-serif;
+  display: block;
 }
-#video{
-  width: 30vw;
-  height: 20vw;
-  background-color: var(--white);
+#video {
+  position: relative;
+  width: 40vw;
+  height: 22.5vw;
+}
+#video iframe,
+#video object,
+#video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 /*================= SEC1 ================*/
 
-
 /*================= SEC2 ================*/
-#sec2{
+#sec2 {
   background-color: var(--white);
   padding: 5vw 10vw 5vw 10vw;
 
@@ -59,42 +63,43 @@
   gap: 6vw;
   position: relative;
 }
-#sec2::before, #sec2::after{
+#sec2::before,
+#sec2::after {
   content: "";
   position: absolute;
   border: 2px solid var(--green1);
   z-index: -1;
 }
-#sec2::before{
+#sec2::before {
   bottom: -1.5vw;
   height: 30%;
   left: 3vw;
   width: 25%;
 }
-#sec2::after{
+#sec2::after {
   bottom: -3.5vw;
   height: 30%;
   left: 1vw;
   width: 10%;
 }
-#sec2 #teufuturologo{
+#sec2 #teufuturologo {
   width: 18vw;
   height: 18vw;
 }
-.flex_conj{
+.flex_conj {
   width: 30vw;
 
   justify-content: center;
   gap: 5vw;
 }
-.flex_conj .text_format1{
+.flex_conj .text_format1 {
   gap: 4vw;
 }
-.text_format1 p{
+.text_format1 p {
   text-align: justify;
   position: relative;
 }
-#sec2 .text_format1 p::after{
+#sec2 .text_format1 p::after {
   content: "";
   width: 2vw;
   height: 2vw;
@@ -104,36 +109,34 @@
   border-bottom: 2px solid var(--green1);
   border-right: 2px solid var(--green1);
 }
-#tf_actions{
+#tf_actions {
   justify-content: space-between;
 }
 /*================= SEC2 ================*/
 
-
-
-
 /*================= SEC4 ================*/
-#sec4{
+#sec4 {
   background-color: var(--white);
   padding: 5vw 10vw 2vw 10vw;
 
   justify-content: flex-start;
   gap: 5vw;
 }
-#sec3 .text_format1{
+#sec3 .text_format1 {
   gap: 1.6vw;
 }
-#carousel_container #carousel{
-    height: 25vw; /*Deve ser alterado*/
-  }
-#colaborator_name{
+#carousel_container #carousel {
+  height: 25vw; /*Deve ser alterado*/
+}
+#colaborator_name {
   margin: auto auto 3vw auto;
   width: fit-content;
   text-align: center;
   font-size: 1.9vw;
   position: relative;
 }
-#colaborator_name::before, #colaborator_name::after{
+#colaborator_name::before,
+#colaborator_name::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -143,28 +146,26 @@
 
   transition: left 200ms, right 200ms;
 }
-#colaborator_name::before{
+#colaborator_name::before {
   top: -0.8vw;
 }
-#colaborator_name::after{
+#colaborator_name::after {
   bottom: -0.8vw;
 }
-#colaborator_name:hover::before, #colaborator_name:hover::after{
+#colaborator_name:hover::before,
+#colaborator_name:hover::after {
   opacity: 1;
   left: -1.5vw;
   right: -1.5vw;
 }
-#colaborator_name a{
+#colaborator_name a {
   color: var(--black);
   gap: 1vw;
 }
 /*================= SEC4 ================*/
 
-
-
-
 /*================= SEC6 ================*/
-#sec6{
+#sec6 {
   position: relative;
 
   padding: 5vw 2vw 5vw 10vw;
@@ -175,32 +176,33 @@
   gap: 5vw;
   margin-top: 5vw;
 }
-#sec6::before, #sec6::after{
+#sec6::before,
+#sec6::after {
   content: "";
   position: absolute;
   z-index: -1;
   border: 2px solid var(--green1);
 }
-#sec6::before{
+#sec6::before {
   width: 10vw;
   height: 4vw;
   right: 4.5vw;
   top: -2vw;
 }
-#sec6::after{
+#sec6::after {
   width: 25vw;
   height: 4vw;
   right: 3vw;
   top: -1vw;
 }
-#site_container{
+#site_container {
   gap: 2vw;
 }
-#site_paragrah{
+#site_paragrah {
   text-align: justify;
   width: 40vw;
 }
-#sobresite_btn{
+#sobresite_btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,28 +210,28 @@
 
   align-self: flex-end;
 }
-#sobresite_btn span{
+#sobresite_btn span {
   width: fit-content;
 }
-@keyframes top_bottom{
-  0%{
-      transform: translateY(10%);
+@keyframes top_bottom {
+  0% {
+    transform: translateY(10%);
   }
-  100%{
+  100% {
     transform: translateY(-10%);
   }
 }
-.anim_topbottom{
+.anim_topbottom {
   display: block;
   animation: top_bottom 500ms ease-in-out 0ms infinite alternate both;
 }
-#sobresite_btn:hover .anim_topbottom{
+#sobresite_btn:hover .anim_topbottom {
   animation-play-state: paused;
 }
 /*================= SEC6 ================*/
 
 /* ================ SEC3 ================*/
-#sec3{
+#sec3 {
   position: relative;
 
   background-color: var(--white);
@@ -240,31 +242,31 @@
   gap: 5vw;
 }
 
-#development{
+#development {
   display: flex;
   justify-content: flex-start;
 }
 
-.process{
+.process {
   position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.process li{
+.process li {
   position: relative;
   width: 100%;
   padding: 0vw 1.5vw;
   margin: 0 1vw;
 }
-#img_note{
+#img_note {
   padding-left: 0.6vw;
 }
 .icons {
   width: 80%;
   margin: 0vw 0.5vw 0vw 0.7vw;
 }
-li p{
+li p {
   display: block;
   font-size: 1.5vw;
   font-weight: 400;
@@ -272,7 +274,7 @@ li p{
   text-align: center;
   color: var(--black);
 }
-.process .item::before{
+.process .item::before {
   content: "";
   width: 3.6vw;
   height: 1vw;
@@ -287,20 +289,21 @@ li p{
 /* ================ SEC3 ================*/
 
 /* ================ SEC5 ================*/
-#sec5{
+#sec5 {
   padding: 0 0 0 5vw;
   align-items: flex-end;
   gap: 6vw;
   margin-top: 4vw;
 }
-#img1_container{
+#img1_container {
   position: relative;
 }
-#img1_container::before, #img1_container::after{
+#img1_container::before,
+#img1_container::after {
   content: "";
   position: absolute;
 }
-#img1_container::before{
+#img1_container::before {
   width: 20%;
   height: 10%;
 
@@ -311,20 +314,20 @@ li p{
   border-top: 0.2vw solid var(--green1);
   border-right: 0.2vw solid var(--green1);
 }
-#img1_container::after{
+#img1_container::after {
   height: 20%;
   right: -1vw;
   bottom: 0;
   border-left: 0.2vw solid var(--green1);
 }
-#sec5 #img1{
+#sec5 #img1 {
   width: 36vw;
 }
-#sec5 h1{
+#sec5 h1 {
   text-align: left;
   /* margin-bottom: 8vw; PARA ANIMAÇÕES FUTURAS */
 }
-#sec5 h1 span{
+#sec5 h1 span {
   display: block;
   font-size: 1.2em;
 }
@@ -339,7 +342,7 @@ li p{
   position: relative;
   margin-bottom: 4vw;
 }
-#sec7::after{
+#sec7::after {
   content: "";
   position: absolute;
   width: 40%;
@@ -349,19 +352,19 @@ li p{
   bottom: -1.5vw;
   z-index: -1;
 }
-#sec7 h1{
+#sec7 h1 {
   color: var(--black);
 }
-#sec7 .content_container{
+#sec7 .content_container {
   display: grid;
-  grid-template-columns: 2fr 7fr;  
+  grid-template-columns: 2fr 7fr;
   gap: 5vw;
 }
-#client{
+#client {
   position: relative;
   z-index: 10;
 }
-#client::after{
+#client::after {
   content: "";
   border: 2px solid var(--green1);
   z-index: -1;
@@ -372,12 +375,12 @@ li p{
   top: -1vw;
   right: -1vw;
 }
-#client img{
+#client img {
   width: 100%;
   border-top-left-radius: 2vw;
   border-bottom-right-radius: 2vw;
 }
-#sec7 #opiniao{
+#sec7 #opiniao {
   text-align: justify;
   display: flex;
   gap: 1vw;
@@ -403,11 +406,12 @@ li p{
   z-index: 100;
   position: relative;
 }
-#partners-images::before, #partners-images::after{
+#partners-images::before,
+#partners-images::after {
   content: "";
   position: absolute;
 }
-#partners-images::before{
+#partners-images::before {
   background-color: var(--green1);
   left: 12vw;
   right: 12vw;
@@ -415,7 +419,7 @@ li p{
   bottom: 7%;
   z-index: -10;
 }
-#partners-images::after{
+#partners-images::after {
   background-color: var(--white);
   width: 70vw;
   top: -16%;
